@@ -1,6 +1,12 @@
+import Navbar from "./components/Navbar";
+require('./App.css')
+
 const App = () => {
   return (
-    <div>Boilerplate Started</div>
+    <>    
+      <Navbar />
+      <div>Boilerplate Started</div>
+    </>
   );
 }
 
