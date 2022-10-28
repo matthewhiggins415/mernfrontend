@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import ScreenContainer from './styles/components/ScreenContainer.styles'
 import {
   BrowserRouter as Router,
   Routes,

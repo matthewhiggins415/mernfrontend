@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { DesktopNav, MobileNav, MobileButton } from '../styles/components/Navbar.styles'
+import { Nav, DesktopNav, MobileNav, ExtendedMobileNav, NotExtendedMobileNav, MobileBtn, DesktopNavItem, MobileExtendedNavItem} from '../styles/components/Navbar.styles'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -8,42 +8,58 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("resize", function() {
-      if (window.innerWidth < 520) {
+      if (window.innerWidth < 600) {
         setIsMobile(true)
       } else {
         setIsMobile(false)
       }
     })
-  }, [])
+  })
 
   const handleMobileClick = () => {
     setExtended(!extended)
   }
 
-  const desktopNav = () => {
-    return (
-      <DesktopNav>
-        <Link to='/'>Landing</Link>
-        <Link to='/pricing'>Pricing</Link>
-        <Link to='/home'>Home</Link>
-        <Link to='/register'>Register</Link>
-        <Link to='/login'>Login</Link>
-      </DesktopNav>
-    )
-  }
+  const desktopNav = () => (
+    <DesktopNav>
+      <DesktopNavItem to="/">Landing</DesktopNavItem>
+      <DesktopNavItem to="/pricing">Pricing</DesktopNavItem>
+      <DesktopNavItem to="/home">Home</DesktopNavItem>
+      <DesktopNavItem to="/register">Register</DesktopNavItem>
+      <DesktopNavItem to="/login">Login</DesktopNavItem>
+    </DesktopNav>
+  )
 
-  const mobileNav = () => {
-    return (
-      <MobileNav extended={extended}>
-        { extended ? <MobileButton onClick={handleMobileClick}> &#10005; </MobileButton> : <MobileButton onClick={handleMobileClick}> &#8801; </MobileButton> }
-      </MobileNav>
-    )
-  }
+  const extendedMobileNav = () => (
+    <ExtendedMobileNav>
+      <MobileBtn onClick={handleMobileClick}> &#10005; </MobileBtn>
+      <MobileExtendedNavItem onClick={handleMobileClick} to="/">Landing</MobileExtendedNavItem>
+      <MobileExtendedNavItem onClick={handleMobileClick} to="/pricing">Pricing</MobileExtendedNavItem>
+      <MobileExtendedNavItem onClick={handleMobileClick} to="/home">Home</MobileExtendedNavItem>
+      <MobileExtendedNavItem onClick={handleMobileClick} to="/register">Register</MobileExtendedNavItem>
+      <MobileExtendedNavItem onClick={handleMobileClick} to="/login">Login</MobileExtendedNavItem>
+    </ExtendedMobileNav>
+  )
+
+  const notExtendedMobileNav = () => (
+    <NotExtendedMobileNav>
+      <MobileBtn onClick={handleMobileClick}> &#8801; </MobileBtn>
+    </NotExtendedMobileNav>
+  )
+
+  const mobileNav = () => (
+    <MobileNav>
+      { extended ? extendedMobileNav() : notExtendedMobileNav() }
+    </MobileNav>
+  )
 
   return (
-    <>
-    { isMobile ? mobileNav() : desktopNav()}
-    </>
+   <Nav>
+     { isMobile ? mobileNav() : desktopNav() }
+   </Nav>
   )
+
+  
 }
+
 export default Navbar
