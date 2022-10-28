@@ -1,14 +1,18 @@
 import React from 'react'
+import { Container } from "../styles/screens/Container.styles"
+import { LoginButton } from '../styles/components/Button.styles'
+import { Input } from '../styles/components/Input.styles'
+import { ScreenContainer } from '../styles/components/ScreenContainer.styles'
 
 const Login = () => {
   return (
-    <div>
-      <div>
-        <input type="text" placeholder="email"/>
-        <input type="password" placeholder="password"/>
-        <button>Login</button>
-      </div>
-    </div>
+    <ScreenContainer>
+      <Container>
+        <Input type="text" placeholder="email"/>
+        <Input type="password" placeholder="password"/>
+        <LoginButton>Login</LoginButton>
+      </Container>
+    </ScreenContainer>
   )
 }
 

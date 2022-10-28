@@ -1,16 +1,19 @@
 import React from 'react'
 import { Container } from '../styles/screens/Container.styles'
+import { Input } from '../styles/components/Input.styles'
+import { LoginButton } from '../styles/components/Button.styles'
+import { ScreenContainer } from '../styles/components/ScreenContainer.styles'
 
 const Register = () => {
   return (
-    <div>
+    <ScreenContainer>
       <Container>
-        <input type="text" placeholder="email"/>
-        <input type="password" placeholder="password"/>
-        <input type="password" placeholder="confirm password"/>
-        <button>Register</button>
+        <Input type="text" placeholder="email"/>
+        <Input type="password" placeholder="password"/>
+        <Input type="password" placeholder="confirm password"/>
+        <LoginButton>Register</LoginButton>
       </Container>
-    </div>
+    </ScreenContainer>
   )
 }
 
