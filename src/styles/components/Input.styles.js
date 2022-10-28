@@ -6,5 +6,5 @@ export const Input = styled.input`
   outline: none;
   border: 1px solid black;
   border-radius: 4px;
-  margin: 5px auto;
+  margin: 10px auto;
 `

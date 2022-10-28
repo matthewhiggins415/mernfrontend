@@ -22,9 +22,7 @@ const Navbar = () => {
 
   const desktopNav = () => (
     <DesktopNav>
-      <DesktopNavItem to="/">Landing</DesktopNavItem>
       <DesktopNavItem to="/pricing">Pricing</DesktopNavItem>
-      <DesktopNavItem to="/home">Home</DesktopNavItem>
       <DesktopNavItem to="/register">Register</DesktopNavItem>
       <DesktopNavItem to="/login">Login</DesktopNavItem>
     </DesktopNav>
@@ -32,10 +30,8 @@ const Navbar = () => {
 
   const extendedMobileNav = () => (
     <ExtendedMobileNav>
-      <MobileBtn onClick={handleMobileClick}> &#10005; </MobileBtn>
-      <MobileExtendedNavItem onClick={handleMobileClick} to="/">Landing</MobileExtendedNavItem>
+      <MobileBtn onClick={handleMobileClick}> &#10005; </MobileBtn> 
       <MobileExtendedNavItem onClick={handleMobileClick} to="/pricing">Pricing</MobileExtendedNavItem>
-      <MobileExtendedNavItem onClick={handleMobileClick} to="/home">Home</MobileExtendedNavItem>
       <MobileExtendedNavItem onClick={handleMobileClick} to="/register">Register</MobileExtendedNavItem>
       <MobileExtendedNavItem onClick={handleMobileClick} to="/login">Login</MobileExtendedNavItem>
     </ExtendedMobileNav>

@@ -1,8 +1,11 @@
 import React from 'react'
+import { PricingScreenContainer } from '../styles/screens/PricingScreen.styles'
 
 const Pricing = () => {
   return (
-    <div>Pricing</div>
+    <PricingScreenContainer>
+      <h1>Pricing</h1>
+    </PricingScreenContainer>
   )
 }
 
