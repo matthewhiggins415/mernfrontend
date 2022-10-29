@@ -5,5 +5,5 @@ export const PricingScreenContainer = styled.div`
   width: 100%;
   background-color: black;
   display: flex;
-  
+  background: linear-gradient(black, #202020);
 `

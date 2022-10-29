@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Nav, DesktopNav, MobileNav, ExtendedMobileNav, NotExtendedMobileNav, MobileBtn, DesktopNavItem, MobileExtendedNavItem} from '../styles/components/Navbar.styles'
+import { Nav, DesktopNav, MobileNav, ExtendedMobileNav, NotExtendedMobileNav, MobileBtn, DesktopNavItem, MobileExtendedNavItem, LeftNavContainer, RightNavContainer, RegisterBtn} from '../styles/components/Navbar.styles'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -22,16 +22,19 @@ const Navbar = () => {
 
   const desktopNav = () => (
     <DesktopNav>
-      <DesktopNavItem to="/pricing">Pricing</DesktopNavItem>
-      <DesktopNavItem to="/register">Register</DesktopNavItem>
-      <DesktopNavItem to="/login">Login</DesktopNavItem>
+      <LeftNavContainer>
+        <DesktopNavItem>MERNguide</DesktopNavItem>
+      </LeftNavContainer>
+      <RightNavContainer>
+        <DesktopNavItem to="/login">Login</DesktopNavItem>
+        <RegisterBtn to="/register">Register</RegisterBtn>
+      </RightNavContainer>
     </DesktopNav>
   )
 
   const extendedMobileNav = () => (
     <ExtendedMobileNav>
       <MobileBtn onClick={handleMobileClick}> &#10005; </MobileBtn> 
-      <MobileExtendedNavItem onClick={handleMobileClick} to="/pricing">Pricing</MobileExtendedNavItem>
       <MobileExtendedNavItem onClick={handleMobileClick} to="/register">Register</MobileExtendedNavItem>
       <MobileExtendedNavItem onClick={handleMobileClick} to="/login">Login</MobileExtendedNavItem>
     </ExtendedMobileNav>

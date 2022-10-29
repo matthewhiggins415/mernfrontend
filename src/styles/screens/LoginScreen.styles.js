@@ -7,10 +7,23 @@ export const LoginScreenContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(black, #202020);
 `
 
 export const Container = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const H2 = styled.h2`
+  margin-bottom: 15px; 
+  color: white;
+  letter-spacing: 2px;
+  font-size: 35px;
+`
+
+export const FormContainer = styled.div`
   width: fit-content;
   height: auto;
   padding: 25px;
@@ -19,5 +32,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid black;
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 20px;
 `

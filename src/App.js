@@ -9,6 +9,7 @@ import Landing from './screens/Landing'
 import Pricing from './screens/Pricing'
 import Register from './screens/Register'
 import Login from './screens/Login'
+import Faq from './screens/Faq'
 require('./App.css')
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/home' element={<Home/>} exact />
         <Route path='/register' element={<Register />} exact />
         <Route path='/login' element={<Login />} exact />
+        <Route path='/faq' element={<Faq />} exact/>
       </Routes>    
     </Router>
   );
