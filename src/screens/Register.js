@@ -14,7 +14,7 @@ const Register = () => {
           <Input type="password" placeholder="confirm password"/>
           <LoginButton>Register</LoginButton>
         </FormContainer>
-        <PricingLink to='/pricing'>Pricing</PricingLink>
+        <PricingLink to='/pricing'>view plans</PricingLink>
       </Container>
     </RegisterScreenContainer>
   )
