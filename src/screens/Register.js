@@ -1,7 +1,8 @@
 import React from 'react'
 import { Input } from '../styles/components/Input.styles'
 import { LoginButton } from '../styles/components/Button.styles'
-import { RegisterScreenContainer, FormContainer, Container, H2, PricingLink } from '../styles/screens/RegisterScreen.styles.js'
+import { RegisterScreenContainer, FormContainer, Container, H2 } from '../styles/screens/RegisterScreen.styles.js'
+import { GreenBorderLink } from '../styles/components/GreenBorderLink.styles'
 
 const Register = () => {
   return (
@@ -9,12 +10,12 @@ const Register = () => {
       <Container>
         <H2>Sign Up</H2>
         <FormContainer>
-          <Input type="text" placeholder="email"/>
-          <Input type="password" placeholder="password"/>
-          <Input type="password" placeholder="confirm password"/>
-          <LoginButton>Register</LoginButton>
+          <Input type="text" placeholder="email" required/>
+          <Input type="password" placeholder="password" required/>
+          <Input type="password" placeholder="confirm password" required/>
+          <LoginButton>Sign Up</LoginButton>
         </FormContainer>
-        <PricingLink to='/pricing'>view plans</PricingLink>
+        <GreenBorderLink to='/pricing'>view plans</GreenBorderLink>
       </Container>
     </RegisterScreenContainer>
   )

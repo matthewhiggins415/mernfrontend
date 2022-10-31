@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 export const LoginScreenContainer = styled.div`
   min-height: 90vh;
@@ -27,11 +28,18 @@ export const FormContainer = styled.div`
   width: fit-content;
   height: auto;
   padding: 25px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, .1);
   border-radius: 20px;
+`
+
+export const ToRegisterLink = styled(Link)` 
+  color: lightgreen;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  cursor: pointer;
 `

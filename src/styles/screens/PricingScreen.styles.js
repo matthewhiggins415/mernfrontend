@@ -5,6 +5,7 @@ export const PricingScreenContainer = styled.div`
   min-height: 90vh;
   width: 100%;
   background-color: black;
+  padding: 30px;
   display: flex;
   background: linear-gradient(black, #202020);
 `
@@ -12,13 +13,17 @@ export const PricingScreenContainer = styled.div`
 export const H1 = styled.h1`
   text-align: center;
   color: lightgreen;
+  margin-top: 20px;
   letter-spacing: 1px;
 `
 
 export const H2 = styled.h2`
   color: white;
+  width: 90%;
+  text-align: center;
+  margin: 0px auto;
   margin-top: 20px;
-`
+  `
 
 export const PricingOfferContainer = styled.div`
   display: flex;
@@ -27,7 +32,7 @@ export const PricingOfferContainer = styled.div`
   width: 80%;
   height: 80%;
   text-align: center;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: rgba(255, 255, 255, .1);
   border-radius: 20px;
   padding: 30px 15px;
@@ -61,3 +66,18 @@ export const FaqLink = styled(Link)`
   margin-top: 30px;
   text-align: center;
 `    
+
+export const PricingInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0px auto;
+
+  @media (max-width: 700px) {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    max-width: none;
+  }
+`
