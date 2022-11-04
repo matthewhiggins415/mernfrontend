@@ -112,6 +112,7 @@ export const RegisterBtn = styled(Link)`
   border: 2px solid lightgreen;
   padding: 10px;
   border-radius: 25px;
+  transition: 150ms ease-in-out;
 
   :hover {
     color: black;
