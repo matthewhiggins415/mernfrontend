@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar user={user} />
       <ToastContainer theme="light" position="top-right" autoClose={1500}/>
       <Routes>
         <Route path='/' element={<Landing/>} exact />
