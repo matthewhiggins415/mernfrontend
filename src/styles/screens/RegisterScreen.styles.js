@@ -23,7 +23,7 @@ export const Container = styled.div`
   align-items: center;
 `
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   width: fit-content;
   height: auto;
   padding: 25px;

@@ -118,6 +118,4 @@ export const RegisterBtn = styled(Link)`
     color: black;
     background-color: lightgreen;
   }
-
-
 `
