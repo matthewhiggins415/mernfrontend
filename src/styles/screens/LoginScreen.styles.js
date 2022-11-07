@@ -24,7 +24,7 @@ export const H2 = styled.h2`
   font-size: 35px;
 `
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   width: fit-content;
   height: auto;
   padding: 25px;
