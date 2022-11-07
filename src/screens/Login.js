@@ -5,7 +5,6 @@ import { LoginButton } from '../styles/components/Button.styles'
 import { Input } from '../styles/components/Input.styles'
 import { LoginScreenContainer, Container, H2, FormContainer } from '../styles/screens/LoginScreen.styles'
 import { ToRegisterLink } from '../styles/screens/LoginScreen.styles'
-import { apiUrl } from '../apiConfig'
 
 const Login = ({ notify, setUser }) => {
   const [formData, setFormData] = useState({

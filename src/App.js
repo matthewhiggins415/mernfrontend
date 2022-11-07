@@ -10,6 +10,7 @@ import Landing from './screens/Landing'
 import Pricing from './screens/Pricing'
 import Register from './screens/Register'
 import Login from './screens/Login'
+import SignOut from './components/SignOut'
 import Faq from './screens/Faq'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -20,7 +21,10 @@ require('./App.css')
 const App = () => {
   const [user, setUser] = useState(null)
 
-  const clearUser = () => setUser(null)
+  const clearUser = () => {
+    setUser(null)
+    notify('sign out successful')
+  }
 
   const notify = (message, type) => {
     if (type === "warning") {
@@ -43,6 +47,8 @@ const App = () => {
         <Route path='/register' element={<Register notify={notify} setUser={setUser} />} exact />
         <Route path='/login' element={<Login notify={notify} setUser={setUser} />} exact />
         <Route path='/faq' element={<Faq />} exact/>
+        <Route path="/sign-out" element={<SignOut clearUser={clearUser} user={user} notify={notify} />} exact/>
+
       </Routes>    
     </Router>
   );
