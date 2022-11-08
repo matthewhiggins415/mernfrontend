@@ -62,7 +62,7 @@ const Register = ({ notify, setUser }) => {
   }
 
   if (shouldNavigate) {
-    return <Navigate to="/home" />
+    return <Navigate to="/payment" />
   }
 
   return (

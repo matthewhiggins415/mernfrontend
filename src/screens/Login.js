@@ -13,6 +13,7 @@ const Login = ({ notify, setUser }) => {
   })
 
   const [navigate, setNavigate] = useState(false) 
+  const [adminNavigate, setAdminNavigate] = useState(false)
 
   const { email, password } = formData
 
@@ -28,12 +29,15 @@ const Login = ({ notify, setUser }) => {
 
     try {
       let res = await signIn(formData)
-      // console.log(res)
+      console.log(res.data.user)
       // set the user   
       setUser(res.data.user)
 
-      // navigate to products screen
-      setNavigate(true)
+      if (res.data.user.isAdmin) {
+        setAdminNavigate(true)
+      } else {
+        setNavigate(true)
+      }
 
       // notify user of successful login
       notify('login successful')
@@ -47,6 +51,9 @@ const Login = ({ notify, setUser }) => {
     return <Navigate to='/home' /> 
   }
 
+  if (adminNavigate) {
+    return <Navigate to='/adminhome' />
+  }
   
   return (
     <LoginScreenContainer>

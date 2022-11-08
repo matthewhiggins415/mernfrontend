@@ -6,12 +6,14 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './screens/Home'
+import AdminHome from './screens/AdminHome'
 import Landing from './screens/Landing'
 import Pricing from './screens/Pricing'
 import Register from './screens/Register'
 import Login from './screens/Login'
 import SignOut from './components/SignOut'
 import Faq from './screens/Faq'
+import Payment from './screens/Payment'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -44,7 +46,10 @@ const App = () => {
         <Route path='/' element={<Landing/>} exact />
         <Route path='/pricing' element={<Pricing/>} exact />
         <Route path='/home' element={<Home/>} exact />
+        <Route path='/adminhome' element={<AdminHome/>} exact />
         <Route path='/register' element={<Register notify={notify} setUser={setUser} />} exact />
+        <Route path='/payment' element={<Payment />} exact />
+
         <Route path='/login' element={<Login notify={notify} setUser={setUser} />} exact />
         <Route path='/faq' element={<Faq />} exact/>
         <Route path="/sign-out" element={<SignOut clearUser={clearUser} user={user} notify={notify} />} exact/>
