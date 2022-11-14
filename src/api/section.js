@@ -1,10 +1,33 @@
-import axios from 'axios';
-import apiUrl from '../apiConfig';
+import axios from 'axios'
+import apiUrl from '../apiConfig'
 
-// create a section
+// create a section 
 
-// get all sections of a course
+// read all sections 
+export const getAllSections = (user, id) => {
+  return axios.get(apiUrl + `/course/${id}/section`, {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
 
-// get a single section 
+// read a single section 
+export const getASingleSection = (user, id) => {
+  return axios.get(apiUrl + `/section/${id}`, {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
 
-// destroy a section 
+// edit a single section 
+
+// destroy a single section 
+export const deleteASection = (user, course, section) => {
+  return axios.delete(apiUrl + `/course/${course}/section/${section}`, {
+    header: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
