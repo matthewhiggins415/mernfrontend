@@ -1,7 +1,15 @@
 import axios from 'axios'
 import apiUrl from '../apiConfig'
 
-// create a section 
+// create a section
+export const createASection = (user, courseId) => {
+  let body = {}
+  return axios.post(apiUrl + `/course/${courseId}/section`, body, {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
 
 // read all sections 
 export const getAllSections = (user, id) => {
@@ -26,8 +34,8 @@ export const getASingleSection = (user, id) => {
 // destroy a single section 
 export const deleteASection = (user, course, section) => {
   return axios.delete(apiUrl + `/course/${course}/section/${section}`, {
-    header: {
-      Authorization: `Bearer ${user.token}`
+    headers: {
+      Authorization: `Bearer ${user.token}`,
     }
   })
 }

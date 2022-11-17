@@ -1,11 +1,10 @@
 import React from 'react'
 import { Container, H2, EditBtn } from '../styles/components/Course.styles'
 
-const Course = () => {
+const Course = ({id, course}) => {
   return (
-    <Container>
-      <H2>Course title</H2>
-      <EditBtn>Edit</EditBtn>
+    <Container to={`/course/${id}`}>
+      <H2>{course.title}</H2>
     </Container>
   )
 }

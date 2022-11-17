@@ -1,6 +1,16 @@
 import axios from 'axios'
 import apiUrl from '../apiConfig'
 
+// create a course 
+export const createACourse = (user) => {
+  let body = {}
+  return axios.post(apiUrl + '/course', body, {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
+
 // get all courses 
 export const getAllCourses = (user) => {
   return axios.get(apiUrl + '/courses', {

@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   display: flex;
   padding: 20px;
   justify-content: space-between;
@@ -8,6 +9,8 @@ export const Container = styled.div`
   border-radius: 5px;
   margin: 10px 0px;
   align-items: center;
+  cursor: pointer;
+  max-width: 600px;
 `
 
 export const H2 = styled.h2`
