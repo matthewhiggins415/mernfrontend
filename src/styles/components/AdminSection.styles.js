@@ -44,3 +44,19 @@ export const TinyBtn = styled.button`
     color: black;
   }
 `
+
+export const TinyLink = styled(Link)`
+  padding: 4px 6px;
+  margin: 2px;
+  cursor: pointer;
+  color: lightgreen;
+  background-color: transparent;
+  transition: 150ms ease-in-out;
+  border: none;
+  text-decoration: none;
+
+  :hover {
+    background-color: lightgreen;
+    color: black;
+  }
+`

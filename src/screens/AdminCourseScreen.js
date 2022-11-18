@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getASingleCourse } from '../api/course';
-import { Container, InfoContainer, InfoContainerHeader, BtnContainer, Btn, SectionContainer, BackBtn} from '../styles/screens/AdminCourseScreen.styles'
+import { Container, InfoContainer, InfoContainerHeader, BtnContainer, Btn, SectionContainer, BackBtn, DeleteBtn } from '../styles/screens/AdminCourseScreen.styles'
 import AdminSection from '../components/AdminSection';
 
 import { createASection, deleteASection } from '../api/section'
@@ -65,7 +65,7 @@ const AdminCourseScreen = ({ user }) => {
             <AdminSection section={section} user={user} id={id} removeSection={removeSection} key={section._id}/>
           )) : "no sections" }
         </SectionContainer>
-      <button>delete course</button>
+        <DeleteBtn>delete course</DeleteBtn>
       </InfoContainer>
     </Container>
   )

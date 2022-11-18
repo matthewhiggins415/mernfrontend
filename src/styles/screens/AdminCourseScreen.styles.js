@@ -119,3 +119,20 @@ export const TinyBtn = styled.button`
     color: black;
   }
 `
+
+export const DeleteBtn = styled.button`
+  padding: 15px;
+  width: 300px;
+  margin: 15px auto;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  border: 1px solid red;
+  transition: 150ms ease-in-out;
+  border-radius: 4px;
+
+  :hover {
+    color: white;
+    background-color: red;
+  }
+`

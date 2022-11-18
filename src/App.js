@@ -18,6 +18,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import CourseScreen from './screens/CourseScreen';
 import AdminCourseScreen from './screens/AdminCourseScreen';
+import AdminSectionScreen from './screens/AdminSectionScreen';
 
 require('./App.css')
 
@@ -53,6 +54,7 @@ const App = () => {
         <Route path='/payment' element={<Payment user={user}/>} exact />
         <Route path='/course/:id' element={<CourseScreen user={user}/>} exact/>
         <Route path='/admin/course/:id' element={<AdminCourseScreen user={user} />} />
+        <Route path='/admin/section/:id' element={<AdminSectionScreen user={user} />} />
 
         <Route path='/login' element={<Login notify={notify} setUser={setUser} />} exact />
         <Route path='/faq' element={<Faq />} exact/>
