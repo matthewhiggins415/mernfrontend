@@ -7,6 +7,7 @@ export const Container = styled.div`
   width: 100%;
   background: linear-gradient(black, #202020);
   overflow-y: scroll;
+  align-items: center;
 `
 
 export const BackBtn = styled(Link)`
@@ -59,6 +60,7 @@ export const Btn = styled.button`
 export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: transparent;
   padding: 5px;
 `
@@ -122,8 +124,7 @@ export const TinyBtn = styled.button`
 
 export const DeleteBtn = styled.button`
   padding: 15px;
-  width: 300px;
-  margin: 15px auto;
+  margin: 0 auto;
   background-color: transparent;
   color: red;
   cursor: pointer;

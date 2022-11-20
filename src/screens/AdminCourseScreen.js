@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getASingleCourse } from '../api/course';
+import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { getASingleCourse, DestroyACourse } from '../api/course';
 import { Container, InfoContainer, InfoContainerHeader, BtnContainer, Btn, SectionContainer, BackBtn, DeleteBtn } from '../styles/screens/AdminCourseScreen.styles'
 import AdminSection from '../components/AdminSection';
 
 import { createASection, deleteASection } from '../api/section'
 
 const AdminCourseScreen = ({ user }) => {
+  let {navigate} = useNavigate()
+
   let { id } = useParams();
   const [course, setCourse] = useState({});
   const [sections, setSections] = useState([]);
   const [refire, setRefire] = useState(false)
+  const [redirect, setRedirect] = useState(false)
 
   useEffect(() => {
     const fetchCourse = async (user, id) => {
@@ -34,6 +39,16 @@ const AdminCourseScreen = ({ user }) => {
     console.log(response)
     setSections(response.data.sections)
     setRefire(!refire)
+  }
+
+  const deleteCourse = async (user, id) => {
+    let response = await DestroyACourse(user, id)
+    console.log(response)
+    setRedirect(true)
+  }
+
+  if (redirect) {
+    return <Navigate to="/adminhome" />
   }
 
   return (
@@ -62,11 +77,11 @@ const AdminCourseScreen = ({ user }) => {
         </InfoContainerHeader>
         <SectionContainer>
           {sections.length > 0 ? sections.map((section) => (
-            <AdminSection section={section} user={user} id={id} removeSection={removeSection} key={section._id}/>
+            <AdminSection section={section} user={user} id={section._id} removeSection={removeSection} key={section._id}/>
           )) : "no sections" }
         </SectionContainer>
-        <DeleteBtn>delete course</DeleteBtn>
       </InfoContainer>
+      <DeleteBtn onClick={() => deleteCourse(user, id)}>delete course</DeleteBtn>
     </Container>
   )
 }

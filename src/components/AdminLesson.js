@@ -1,8 +1,8 @@
 import React from 'react';
-import { Lesson, LessonHeader, TinyBtn } from '../styles/components/AdminLesson.styles'
+import { Lesson, LessonHeader, TinyBtn, TinyLink } from '../styles/components/AdminLesson.styles'
 import { BtnContainer } from '../styles/screens/AdminCourseScreen.styles';
  
-const AdminLesson = ({ user, lesson, sectionID, index, removeLesson }) => {
+const AdminLesson = ({ user, lesson, sectionID, index, deleteLesson}) => {
   return (
     <Lesson>
       <LessonHeader>
@@ -10,8 +10,8 @@ const AdminLesson = ({ user, lesson, sectionID, index, removeLesson }) => {
         <p>{lesson.title}</p>
       </LessonHeader>
       <BtnContainer>
-        <TinyBtn>edit</TinyBtn>
-        <TinyBtn onClick={() => removeLesson(user, sectionID, lesson._id)}>delete</TinyBtn>
+        <TinyLink to={`/admin/lesson/${lesson._id}`}>edit</TinyLink>
+        <TinyBtn onClick={() => deleteLesson(user, sectionID, lesson._id)}>delete</TinyBtn>
       </BtnContainer>
     </Lesson>
   )

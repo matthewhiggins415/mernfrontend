@@ -41,3 +41,10 @@ export const publishACourse = (user, id) => {
 }
 
 // delete a course 
+export const DestroyACourse = (user, id) => {
+  return axios.delete(apiUrl + `/course/${id}`, {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}

@@ -20,7 +20,8 @@ export const SectionBtnContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid lightgreen;
+  border: 1px solid lightgreen;
+  padding: 10px;
 `
 
 //here
