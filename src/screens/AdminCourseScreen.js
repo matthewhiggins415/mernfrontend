@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { getASingleCourse, DestroyACourse } from '../api/course';
 import { Container, InfoContainer, InfoContainerHeader, BtnContainer, Btn, SectionContainer, BackBtn, DeleteBtn } from '../styles/screens/AdminCourseScreen.styles'
 import AdminSection from '../components/AdminSection';
+import AdminCourseModal from '../components/AdminCourseModal';
 
 import { createASection, deleteASection } from '../api/section'
 
@@ -16,6 +17,7 @@ const AdminCourseScreen = ({ user }) => {
   const [sections, setSections] = useState([]);
   const [refire, setRefire] = useState(false)
   const [redirect, setRedirect] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     const fetchCourse = async (user, id) => {
@@ -47,18 +49,25 @@ const AdminCourseScreen = ({ user }) => {
     setRedirect(true)
   }
 
+  const activateModal = () => {
+    setShowModal(!showModal)
+  }
+
   if (redirect) {
     return <Navigate to="/adminhome" />
   }
 
   return (
-    <Container>
+    <>
+      <AdminCourseModal activateModal={activateModal} showModal={showModal} course={course}/>
+      <Container>
       <InfoContainer>
         <BackBtn to={'/adminhome'}>back</BackBtn>
         <InfoContainerHeader>
           <h2>General Course Info:</h2>
           <BtnContainer>
-            <Btn>edit</Btn>
+            <Btn onClick={() => activateModal()}>edit</Btn>
+            <Btn onClick={() => deleteCourse(user, id)}>delete</Btn>
           </BtnContainer>
         </InfoContainerHeader>
         <div>
@@ -81,8 +90,8 @@ const AdminCourseScreen = ({ user }) => {
           )) : "no sections" }
         </SectionContainer>
       </InfoContainer>
-      <DeleteBtn onClick={() => deleteCourse(user, id)}>delete course</DeleteBtn>
     </Container>
+  </>
   )
 }
 

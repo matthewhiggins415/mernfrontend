@@ -2,12 +2,14 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
+  display: block;
   min-height: 90vh;
   margin: 0px;
   width: 100%;
   background: linear-gradient(black, #202020);
   overflow-y: scroll;
   align-items: center;
+  transition: 150ms ease-in-out;
 `
 
 export const BackBtn = styled(Link)`
