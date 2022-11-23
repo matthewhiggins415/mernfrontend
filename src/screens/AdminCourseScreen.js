@@ -59,7 +59,7 @@ const AdminCourseScreen = ({ user }) => {
 
   return (
     <>
-      <AdminCourseModal activateModal={activateModal} showModal={showModal} course={course}/>
+      <AdminCourseModal activateModal={activateModal} showModal={showModal} course={course} user={user} setCourse={setCourse}/>
       <Container>
       <InfoContainer>
         <BackBtn to={'/adminhome'}>back</BackBtn>

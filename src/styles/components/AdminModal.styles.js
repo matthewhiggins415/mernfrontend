@@ -14,9 +14,9 @@ export const ModalContainer = styled.div`
 export const ModalFormContainer = styled.div`
   position: fixed;
   width: 50%;
-  min-width: 280px;
+  min-width: 200px;
   max-width: 400px;
-  height: 50%;
+  height: 40%;
   max-height: 700px;
   top: 25%;
   left: 50%;
@@ -31,21 +31,18 @@ export const ModalFormContainer = styled.div`
 `
 
 export const ModalHeader = styled.div`
-  width: 100%;
-  height: 20%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  background-color: black;
 `
 
 export const ModalForm = styled.form`
   width: 90%;
-  height: 80%;
+  height: 70%;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
   justify-content: space-evenly;
   margin: 0 auto;
 `
@@ -56,4 +53,37 @@ export const ModalCloseBtn = styled.button`
   background-color: transparent;
   cursor: pointer;
   border: none;
+`
+
+export const Input = styled.input`
+  padding: 15px; 
+  width: 80%;
+  margin: 0 auto;
+  outline: none;
+  color: white;
+  background-color: transparent;
+  border: 1px solid lightgreen;
+`
+
+export const CheckboxContainer = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+`
+
+export const Btn = styled.button`
+  padding: 15px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 1px solid lightgreen;
+  color: lightgreen;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+
+  :hover {
+    background-color: lightgreen;
+    color: black;
+  }
 `

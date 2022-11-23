@@ -30,10 +30,10 @@ export const getASingleCourse = (user, id) => {
 }
 
 // edit a single course 
-
-// publish a single course 
-export const publishACourse = (user, id) => {
-  return axios.put(apiUrl + `/course/${id}/publish`, {
+export const editACourse = (data, user, id) => {
+  return axios.put(apiUrl + `/course/${id}`, {
+    course: data
+  } ,{
     headers: {
       Authorization: `Bearer ${user.token}`
     }
