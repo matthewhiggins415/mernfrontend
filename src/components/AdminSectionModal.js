@@ -3,7 +3,6 @@ import { ModalContainer, ModalFormContainer, ModalForm, ModalHeader, ModalCloseB
 import { editASection } from '../api/section';
 
 const AdminSectionModal = ({ user, activateModal, showModal, setSection, section }) => {
-    console.log(section)
   const [title, setTitle] = useState(section.title)
 
   const handleSubmit = async (e) => {
@@ -15,7 +14,7 @@ const AdminSectionModal = ({ user, activateModal, showModal, setSection, section
 
     let response = await editASection(newSection, user, section._id)
     console.log('submited:', response)
-    setSection(response.updatedSection)
+    setSection(response.data.updatedSection)
     activateModal();
   }
 
