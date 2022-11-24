@@ -33,7 +33,7 @@ export const getASingleCourse = (user, id) => {
 export const editACourse = (data, user, id) => {
   return axios.put(apiUrl + `/course/${id}`, {
     course: data
-  } ,{
+  }, {
     headers: {
       Authorization: `Bearer ${user.token}`
     }

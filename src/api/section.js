@@ -30,6 +30,15 @@ export const getASingleSection = (user, id) => {
 }
 
 // edit a single section 
+export const editASection = (data, user, id) => {
+  return axios.put(apiUrl + `/section/${id}`, {
+    section: data 
+  }, {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
 
 // destroy a single section 
 export const deleteASection = (user, course, section) => {
