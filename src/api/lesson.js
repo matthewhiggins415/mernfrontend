@@ -30,6 +30,15 @@ export const getASingleLesson = (user, lesson) => {
 }
 
 // edit a single lesson 
+export const updateALesson = (data, user, lesson) => {
+  return axios.put(apiUrl + `/lesson/${lesson}`, {
+    lesson: data
+  }, {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
 
 // delete a single lesson 
 export const deleteALesson = (user, section, lesson) => {

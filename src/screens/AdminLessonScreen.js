@@ -1,36 +1,50 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getASingleLesson } from '../api/lesson';
-import { Container, BackBtn, InfoContainer, InfoContainerHeader, LessonHeader, TinyBtn} from '../styles/screens/AdminLessonScreen.styles';
+import { Container, BackBtn, BtnContainer, InfoContainer, InfoContainerHeader, Btn} from '../styles/screens/AdminCourseScreen.styles';
+import AdminLessonModal from '../components/AdminLessonModal';
 
 const AdminLessonScreen = ({ user }) => {
   const { id } = useParams();
   const [lesson, setLesson] = useState({});
+  const [showModal, setShowModal] = useState(false);
+
 
   useEffect(() => {
     const fetchLesson = async () => {
       let response = await getASingleLesson(user, id)
-      console.log(response)
+      console.log("fetch lesson:", response)
       setLesson(response.data.lesson)
     } 
     
     fetchLesson()
   }, [])
 
+  const activateModal = () => {
+    setShowModal(!showModal)
+  }
+
   return (
-    <Container>
-      <BackBtn to={`/admin/section/${lesson.section_id}`}>Back</BackBtn>
-      <InfoContainer>
+    <>
+      <AdminLessonModal user={user} activateModal={activateModal} showModal={showModal} lesson={lesson} setLesson={setLesson}/>
+      <Container>
+        <InfoContainer>
+          <BackBtn to={`/admin/section/${lesson.section_id}`}>Back</BackBtn>
           <InfoContainerHeader>
-            <p style={{color: 'white'}}>{lesson.title}</p>
-            <TinyBtn>edit</TinyBtn>
+            <h2>Lesson Info:</h2>
+            <BtnContainer>
+              <Btn onClick={() => activateModal()}>edit</Btn>
+              <Btn>delete</Btn>
+            </BtnContainer>
           </InfoContainerHeader>
           <div>
+            <p>{lesson.title}</p>
             <p>{lesson.video}</p>
+            <p>{lesson.repo}</p>
           </div>
-          <p>{lesson.repo}</p>
-      </InfoContainer>
-    </Container>
+        </InfoContainer>
+      </Container>
+    </>
   )
 }
 

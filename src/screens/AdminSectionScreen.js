@@ -8,10 +8,10 @@ import { getASingleSection } from '../api/section';
 import { createALesson, deleteALesson } from '../api/lesson';
 
 const AdminSectionScreen = ({ user }) => { 
-  const { id } = useParams()
+  const { id } = useParams();
   const [section, setSection] = useState({});
   const [lessons, setLessons] = useState([]);
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const fetchSection = async (user, id) => {
