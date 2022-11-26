@@ -32,8 +32,8 @@ const AdminLessonModal = ({ user, activateModal, showModal, setLesson, lesson })
         </ModalHeader>
         <ModalForm onSubmit={handleSubmit}>
           <Input value={title} type="text" placeholder={lesson.title} onChange={(e) => {setTitle(e.target.value)}}/>
-          <Input value={video} type="text" placeholder={lesson.video} onChange={(e) => {setVideo(e.target.value)}}/>
           <Input value={repo} type="text" placeholder={lesson.repo} onChange={(e) => {setRepo(e.target.value)}}/>
+          <Input value={video} type="file" placeholder={lesson.video} onChange={(e) => {setVideo(e.target.value)}}/>
           <Btn type="submit">Submit</Btn>
         </ModalForm>
       </ModalFormContainer>

@@ -8,8 +8,7 @@ const AdminLessonScreen = ({ user }) => {
   const { id } = useParams();
   const [lesson, setLesson] = useState({});
   const [showModal, setShowModal] = useState(false);
-
-
+  
   useEffect(() => {
     const fetchLesson = async () => {
       let response = await getASingleLesson(user, id)
@@ -43,6 +42,8 @@ const AdminLessonScreen = ({ user }) => {
             <p>{lesson.repo}</p>
           </div>
         </InfoContainer>
+        <video autoplay controls crossOrigin="anonymous" loop src="http://localhost:5000/video" width="600px" type="video/quicktime"></video>
+
       </Container>
     </>
   )
