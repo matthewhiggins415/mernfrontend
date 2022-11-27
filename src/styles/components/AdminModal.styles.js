@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const ModalContainer = styled.div`
   display: ${(props) => (props.showModal ? 'block' : 'none')};
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -16,7 +16,7 @@ export const ModalFormContainer = styled.div`
   width: 50%;
   min-width: 200px;
   max-width: 400px;
-  height: 40%;
+  height: auto;
   max-height: 700px;
   top: 25%;
   left: 50%;
@@ -28,6 +28,7 @@ export const ModalFormContainer = styled.div`
   padding: 20px;
   background-color: black;
   border: 2px solid lightgreen;
+  z-index: 10;
 `
 
 export const ModalHeader = styled.div`
@@ -41,10 +42,12 @@ export const ModalHeader = styled.div`
 export const ModalForm = styled.form`
   width: 90%;
   height: 70%;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin: 0 auto;
+  z-index: 10;
 `
 
 export const ModalCloseBtn = styled.button`
@@ -63,6 +66,7 @@ export const Input = styled.input`
   color: white;
   background-color: transparent;
   border: 1px solid lightgreen;
+  z-index: 10;
 `
 
 export const CheckboxContainer = styled.div`

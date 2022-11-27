@@ -35,6 +35,19 @@ export const updateALesson = (data, user, lesson) => {
     lesson: data
   }, {
     headers: {
+      // 'Content-Type': 'multipart/form-data',
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
+
+export const updateALessonVideo = (data, user, lesson) => {
+  console.log("data in api post", data)
+  return axios.post(apiUrl + `/lesson/${lesson}/video`, {
+    video: data
+  }, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
       Authorization: `Bearer ${user.token}`
     }
   })

@@ -7,7 +7,10 @@ export const Container = styled.div`
   width: 100%;
   background: linear-gradient(black, #202020);
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 20px;
 `
 
@@ -25,9 +28,8 @@ export const BackBtn = styled(Link)`
 
 export const InfoContainer = styled.div`
   width: 80%;
-  margin: 10px auto;
+  margin: 0 auto;
   color: white;
-  padding: 20px;
   display: flex;
   flex-direction: column;
 `
@@ -52,4 +54,13 @@ export const TinyBtn = styled.button`
     background-color: lightgreen;
     color: black;
   }
+`
+
+export const VideoContainer = styled.video`
+  width: 100%;
+  border: 2px solid lightgreen;
+  border-radius: 10px;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
 `

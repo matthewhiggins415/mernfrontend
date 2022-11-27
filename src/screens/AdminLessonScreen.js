@@ -3,17 +3,20 @@ import { useParams } from 'react-router-dom';
 import { getASingleLesson } from '../api/lesson';
 import { Container, BackBtn, BtnContainer, InfoContainer, InfoContainerHeader, Btn} from '../styles/screens/AdminCourseScreen.styles';
 import AdminLessonModal from '../components/AdminLessonModal';
+import AdminVideo from '../components/AdminVideo';
 
 const AdminLessonScreen = ({ user }) => {
   const { id } = useParams();
   const [lesson, setLesson] = useState({});
   const [showModal, setShowModal] = useState(false);
+  const [sectionID, setSectionID] = useState('')
   
   useEffect(() => {
     const fetchLesson = async () => {
       let response = await getASingleLesson(user, id)
       console.log("fetch lesson:", response)
       setLesson(response.data.lesson)
+      setSectionID(response.data.lesson.section_id)
     } 
     
     fetchLesson()
@@ -28,7 +31,7 @@ const AdminLessonScreen = ({ user }) => {
       <AdminLessonModal user={user} activateModal={activateModal} showModal={showModal} lesson={lesson} setLesson={setLesson}/>
       <Container>
         <InfoContainer>
-          <BackBtn to={`/admin/section/${lesson.section_id}`}>Back</BackBtn>
+          <BackBtn to={`/admin/section/${sectionID}`}>Back</BackBtn>
           <InfoContainerHeader>
             <h2>Lesson Info:</h2>
             <BtnContainer>
@@ -36,14 +39,17 @@ const AdminLessonScreen = ({ user }) => {
               <Btn>delete</Btn>
             </BtnContainer>
           </InfoContainerHeader>
-          <div>
-            <p>{lesson.title}</p>
-            <p>{lesson.video}</p>
-            <p>{lesson.repo}</p>
-          </div>
         </InfoContainer>
-        <video autoplay controls crossOrigin="anonymous" loop src="http://localhost:5000/video" width="600px" type="video/quicktime"></video>
-
+        <InfoContainer>
+          {
+            lesson.video !== "no video" ? <AdminVideo showModal={showModal} video={lesson.video} /> : null
+          }
+        </InfoContainer>
+        <InfoContainer>
+          <p>{lesson.title}</p>
+          <p>{lesson.video}</p>
+          <p>{lesson.repo}</p>
+        </InfoContainer>
       </Container>
     </>
   )

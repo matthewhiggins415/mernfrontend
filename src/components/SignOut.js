@@ -20,7 +20,7 @@ const SignOut = ({ user, clearUser, notify }) => {
     performSignOut()
   }, [])
   
-  if (!user || shouldNavigate) {
+  if (!user) {
     return <Navigate to="/"/>
   }
 

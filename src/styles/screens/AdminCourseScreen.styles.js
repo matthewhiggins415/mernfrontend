@@ -28,7 +28,6 @@ export const InfoContainer = styled.div`
   width: 80%;
   margin: 10px auto;
   color: white;
-  padding: 20px;
   display: flex;
   flex-direction: column;
 `
@@ -36,7 +35,6 @@ export const InfoContainerHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
 `
 //here
 export const BtnContainer = styled.div`
