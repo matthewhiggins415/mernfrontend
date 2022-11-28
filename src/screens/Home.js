@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'; 
-import { getAllCourses } from '../api/course';
+import { getAllPublishedCourses } from '../api/course';
 import { HomeScreenContainer, Container } from '../styles/screens/HomeScreen.styles';
 import Course from '../components/Course';
 
@@ -8,7 +8,7 @@ const Home = ({ user }) => {
 
   useEffect(() => {
     const fetchCourses = async (user) => {
-      let response = await getAllCourses(user)
+      let response = await getAllPublishedCourses(user)
       console.log("response", response)
       setCourses(response.data.courses)
     }

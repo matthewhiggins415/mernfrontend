@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getASingleCourse } from '../api/course'
-import { ScreenContainer } from '../styles/screens/CourseScreen.styles'
+import { ScreenContainer, BackBtn } from '../styles/screens/CourseScreen.styles'
 
 const CourseScreen = ({ user }) => {
   let { id } = useParams();
@@ -21,8 +21,7 @@ const CourseScreen = ({ user }) => {
 
   return (
     <ScreenContainer>
-      <div>
-      </div>
+      <BackBtn to="/home">Back</BackBtn>
       <div>
         {sections.map((section, index) => (
           <div>

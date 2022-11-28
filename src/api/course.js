@@ -20,6 +20,14 @@ export const getAllCourses = (user) => {
   })
 }
 
+export const getAllPublishedCourses = (user) => {
+  return axios.get(apiUrl + '/published/courses', {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
+
 // get a single course 
 export const getASingleCourse = (user, id) => {
   return axios.get(apiUrl + `/courses/${id}`, {

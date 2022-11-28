@@ -9,14 +9,19 @@ const AdminLessonScreen = ({ user }) => {
   const { id } = useParams();
   const [lesson, setLesson] = useState({});
   const [showModal, setShowModal] = useState(false);
-  const [sectionID, setSectionID] = useState('')
+  const [hasVideo, setHasVideo] = useState(false)
   
   useEffect(() => {
     const fetchLesson = async () => {
       let response = await getASingleLesson(user, id)
       console.log("fetch lesson:", response)
       setLesson(response.data.lesson)
-      setSectionID(response.data.lesson.section_id)
+
+      if (response.data.lesson.video === "no video") {
+        setHasVideo(false)
+      } else {
+        setHasVideo(true)
+      }
     } 
     
     fetchLesson()
@@ -31,7 +36,7 @@ const AdminLessonScreen = ({ user }) => {
       <AdminLessonModal user={user} activateModal={activateModal} showModal={showModal} lesson={lesson} setLesson={setLesson}/>
       <Container>
         <InfoContainer>
-          <BackBtn to={`/admin/section/${sectionID}`}>Back</BackBtn>
+          <BackBtn to={`/admin/section/${lesson.section_id}`}>Back</BackBtn>
           <InfoContainerHeader>
             <h2>Lesson Info:</h2>
             <BtnContainer>
@@ -42,7 +47,8 @@ const AdminLessonScreen = ({ user }) => {
         </InfoContainer>
         <InfoContainer>
           {
-            lesson.video !== "no video" ? <AdminVideo showModal={showModal} video={lesson.video} /> : null
+            // only show vdieo component if the video property of lesson is NOT "no video"
+            hasVideo ? (<AdminVideo showModal={showModal} video={lesson.video} />) : null
           }
         </InfoContainer>
         <InfoContainer>
