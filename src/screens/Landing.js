@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Hero, TitleWrapper, TopTitle, BottomTitle, SweetTitle, AskSection } from '../styles/screens/LandingScreen.styles'
+import { Container, Hero, TitleWrapper, TopTitle, BottomTitle, SweetTitle, AskSection, AskSectionLeft,  AskSectionRight } from '../styles/screens/LandingScreen.styles'
 
 const Landing = () => {
   return (
@@ -15,7 +15,8 @@ const Landing = () => {
         </TitleWrapper>
       </Hero>
       <AskSection>
-        <h1>Join for free</h1>
+        <AskSectionLeft>image</AskSectionLeft>
+        <AskSectionRight>quote</AskSectionRight>
       </AskSection>
     </Container>
   )

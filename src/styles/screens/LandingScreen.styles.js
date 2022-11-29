@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import img from '../../assets/mountain.jpg'
 
 export const Container = styled.div`
   min-height: 90vh;
@@ -9,7 +10,7 @@ export const Container = styled.div`
 
 export const Hero = styled.div`
   width: 100%;
-  min-height: 40vh;
+  min-height: 80vh;
   color: lightgreen;
   display: flex;
   align-items: center;
@@ -80,7 +81,23 @@ export const SweetTitle = styled.h1 `
   }
 `
 export const AskSection = styled.div`
-  min-height: 30vh;
+  min-height: 90vh;
   width: 100%;
-  background-color: white;
+  background-color: blue;
+  display: flex;
+`
+
+export const AskSectionLeft = styled.image`
+  height: 900px;
+  width: 50vw;
+  background-image: url(${img});
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: contain;
+`
+
+export const AskSectionRight = styled.div`
+  width: 50%;
+  height: 100%;
+  background-color: purple;
 `
