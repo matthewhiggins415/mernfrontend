@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import img from '../../assets/mountain.jpg'
 
 export const Container = styled.div`
   min-height: 90vh;
@@ -81,23 +80,72 @@ export const SweetTitle = styled.h1 `
   }
 `
 export const AskSection = styled.div`
-  min-height: 90vh;
-  width: 100%;
-  background-color: blue;
-  display: flex;
-`
-
-export const AskSectionLeft = styled.image`
-  height: 900px;
-  width: 50vw;
-  background-image: url(${img});
-  background-repeat: no-repeat;
-  background-position: center;  
-  background-size: contain;
-`
-
-export const AskSectionRight = styled.div`
+  height: auto;
+  min-height: 100vh;
   width: 50%;
-  height: 100%;
-  background-color: purple;
+  margin: 0 auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  color: whitesmoke;
+  text-align: center;
+
+  h2 {
+    padding-bottom: 5px;
+    letter-spacing: 1.2px;
+  }
+
+  h4 {
+    margin-top: 10px;
+  }
+
+  @media only screen and (max-width: 700px){
+    width: 100%;
+  }
+`
+
+export const ProjectContainer = styled.div`
+  width: 100%;
+  background-color: transparent;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+`
+export const ProjectCard = styled.div`
+  height: 400px;
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid lightgreen;
+  border-radius: 10px;
+`
+
+export const OfferList = styled.div`
+  color: white;
+  height: 400px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style: inside;
+  border-top: 5px dashed lightgreen;
+
+  ul {
+    list-style: none;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  li {
+    font-size: 22px;
+    letter-spacing: 1.2px;
+  }
 `
