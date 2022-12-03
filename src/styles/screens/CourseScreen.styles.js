@@ -15,7 +15,7 @@ export const LearningContainer = styled.div`
   height: 95vh;
   display: flex;
   margin: 0 auto; 
-  background-color: green;
+  background-color: transparent;
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
@@ -26,9 +26,9 @@ export const LearningContainer = styled.div`
 
 // Learning portal is where video and resources will live within column 
 export const LearningPortal = styled.div`
+  width: ${(props) => (props.courseNavActive ? "80%" : "100%")};
   display: flex;
   flex-direction: column; 
-  width: 80%;
   background-color: purple;
   min-height: 600px;
 
@@ -38,43 +38,62 @@ export const LearningPortal = styled.div`
 `
 
 export const CourseNavigation = styled.div`
-  width: ${(props) => (props.courseNavActive ? "20%" : "5%")};
+  width: ${(props) => (props.courseNavActive ? "20%" : "auto")};
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: red;
+  background-color: transparent;
 
   @media only screen and (max-width: 600px) {
     width: 100%;
   }
 `
-
+// --------------------------------------------- course navigation styling ------------------------------
 export const CourseNavigationNav = styled.div`
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
   min-height: 20px; 
-  background-color: gray;
+  background-color: transparent;
+  padding: ${(props) => (props.courseNavActive ? "10px" : "none")};
+  border-bottom: ${(props) => (props.courseNavActive ? "2px solid lightgreen" : "none")};
 `
 
 export const CourseNavCollapseBtn = styled.button`
   padding: 5px; 
   cursor: pointer; 
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin: ${(props) => (props.courseNavActive ? "none" : "5px")};
 `
 
 export const CourseNavTitle = styled.h2`
   display: ${(props) => (props.courseNavActive ? "block" : "none")};
-  color: black;
+  color: white;
 `
 
 // this is where all the sections will live 
 // display should be none when not active 
 export const CourseNavigationContainer = styled.div`
-  display: ${(props) => (props.courseNavActive ? "block" : "none")};
-  background-color: black;
+  display: ${(props) => (props.courseNavActive ? "flex" : "none")};
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: transparent;
   width: 90%;
   margin: 0 auto;
-  height: 100%;
+  height: auto;
 `
+
+
+
+// this is the container for them lessons 
+export const CourseSectionLessonContainer = styled.div``
+
+// -------------------------------- course navigation styling END ---------------------------------------
 
 export const VideoContainer = styled.div`
   height: 70%;
