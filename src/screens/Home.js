@@ -19,9 +19,13 @@ const Home = ({ user }) => {
   return (
     <HomeScreenContainer>
       <Container>
+        <h1>Your courses:</h1>
       {courses.map((course, index) => (
         <Course id={course._id} course={course} key={index}/>
       ))}
+      </Container>
+      <Container>
+        <h1>Other Courses:</h1>
       </Container>
     </HomeScreenContainer>
   )

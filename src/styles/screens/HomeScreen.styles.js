@@ -9,11 +9,15 @@ export const HomeScreenContainer = styled.div`
   `
 
 export const Container = styled.div`
-  width: 50%;
+  width: 100%;
+  height: 50vh;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   padding: 30px;
   margin: auto;
+  color: white;
+  border: 1px solid red;
 
   @media (max-width: 700px) {
     width: 90%;
