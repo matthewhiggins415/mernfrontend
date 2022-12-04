@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const ScreenContainer = styled.div`
   min-height: 90vh;
@@ -29,7 +28,7 @@ export const LearningPortal = styled.div`
   width: ${(props) => (props.courseNavActive ? "80%" : "100%")};
   display: flex;
   flex-direction: column; 
-  background-color: purple;
+  background-color: transparent;
   min-height: 600px;
 
   @media only screen and (max-width: 600px) {
@@ -89,23 +88,10 @@ export const CourseNavigationContainer = styled.div`
 `
 
 
-
 // this is the container for them lessons 
 export const CourseSectionLessonContainer = styled.div``
 
 // -------------------------------- course navigation styling END ---------------------------------------
 
-export const VideoContainer = styled.div`
-  height: 70%;
-  background: yellow;
-  width: 100%;
-`
 
 //this is where resources for lesson will live - has a navigation bar and container with respective info. 
-export const ResourceContainer = styled.div`
-  min-height: 30%;
-  width: 100%;
-  display: flex;
-  flex-direction: column; 
-  background-color: blue;
-`

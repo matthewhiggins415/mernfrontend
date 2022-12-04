@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 // this is the container for sections within the course navbar
 export const CourseSectionContainer = styled.div`
@@ -42,15 +41,16 @@ export const CourseSectionLessonsContainer = styled.div`
   background-color: transparent;
 `
 
-export const LessonContainer = styled.div`
+export const LessonContainerBtn = styled.button`
   padding: 10%;
   width: 100%;
   height: auto;
   color: white;
   background-color: transparent;
-  padding: 5px;
+  padding: 8px;
   cursor: pointer;
   transition: 150ms ease-in-out;
+  border: none;
 
   :hover {
     color: lightgreen;
