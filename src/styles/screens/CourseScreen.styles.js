@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ScreenContainer = styled.div`
   min-height: 90vh;
-  width: 100vw;
   width: 100%;
   margin: 0;
   background: linear-gradient(black, #202020);
@@ -11,7 +10,7 @@ export const ScreenContainer = styled.div`
 //learning container will have the learning portal and the collapsable nav for the course within it. 
 export const LearningContainer = styled.div`
   min-width: 95vw;
-  height: 95vh;
+  min-height: 95vh;
   display: flex;
   margin: 0 auto; 
   background-color: transparent;
@@ -89,7 +88,15 @@ export const CourseNavigationContainer = styled.div`
 
 
 // this is the container for them lessons 
-export const CourseSectionLessonContainer = styled.div``
+export const NoLessonContainer = styled.div`
+  height: 70%;
+  background: transparent;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 // -------------------------------- course navigation styling END ---------------------------------------
 

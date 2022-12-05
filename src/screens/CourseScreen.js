@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getASingleCourse } from '../api/course'
-import { ScreenContainer, LearningContainer, LearningPortal, CourseNavigation, ResourceContainer, CourseNavigationNav,  CourseNavigationContainer, CourseNavCollapseBtn, CourseNavTitle} from '../styles/screens/CourseScreen.styles'
+import { ScreenContainer, LearningContainer, LearningPortal, CourseNavigation, CourseNavigationNav,  CourseNavigationContainer, CourseNavCollapseBtn, CourseNavTitle, NoLessonContainer } from '../styles/screens/CourseScreen.styles'
 import CourseNavSection from '../components/CourseNavSection';
 import UserLessonVideo from '../components/UserLessonVideo';
 import UserLessonResource from '../components/UserLessonResource';
@@ -36,8 +36,8 @@ const CourseScreen = ({ user }) => {
     <ScreenContainer>
       <LearningContainer>
         <LearningPortal courseNavActive={courseNavActive}>
-           {Object.keys(activeLesson).length > 0 ? <UserLessonVideo lesson={activeLesson}/> : <p>No Lesson</p>}
-           <UserLessonResource />
+           {Object.keys(activeLesson).length > 0 ? <UserLessonVideo lesson={activeLesson}/> : <NoLessonContainer>No Lesson</NoLessonContainer>}
+           <UserLessonResource lesson={activeLesson}/>
         </LearningPortal>
         <CourseNavigation courseNavActive={courseNavActive}>
           <CourseNavigationNav courseNavActive={courseNavActive}>
