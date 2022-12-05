@@ -149,3 +149,19 @@ export const OfferList = styled.div`
     letter-spacing: 1.2px;
   }
 `
+
+export const GetStartedBtn = styled.button`
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid lightgreen;
+  background-color: transparent;
+  color: lightgreen;
+  font-size: 25px;
+  transition: 150ms ease-in-out;
+  cursor: pointer;
+
+  :hover {
+    color: black;
+    background-color: lightgreen;
+  }
+`
