@@ -6,7 +6,7 @@ const UserLessonVideo = ({ lesson }) => {
   let { video } = lesson
   return (
     <UserVideoContainer>
-      <LessonVideo autoplay controls crossOrigin="anonymous" loop src={`http://localhost:5000/video/${video}`} type="video/quicktime"></LessonVideo>
+      <LessonVideo autoplay controls crossOrigin="anonymous" loop src={`http://localhost:5000/video/${video}`} type="video/quicktime"></LessonVideo>s
     </UserVideoContainer>
   )
 }
