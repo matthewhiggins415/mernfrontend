@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'; 
 import { getAllPublishedCourses } from '../api/course';
-import { HomeScreenContainer, Container } from '../styles/screens/HomeScreen.styles';
+import { HomeScreenContainer, Container, Hero, Img, InspirationalDiv } from '../styles/screens/HomeScreen.styles';
 import Course from '../components/Course';
+import img from '../assets/homebackground.jpg'
 
 const Home = ({ user }) => {
   const [courses, setCourses] = useState([]);
@@ -18,6 +19,10 @@ const Home = ({ user }) => {
 
   return (
     <HomeScreenContainer>
+      <Hero>
+        <Img src={img} />
+        <InspirationalDiv>"Experience is the name everyone gives to their mistakes."</InspirationalDiv>
+      </Hero>
       <Container>
         <h1>Your courses:</h1>
       {courses.map((course, index) => (

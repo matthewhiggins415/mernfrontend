@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getASingleCourse } from '../api/course'
-import { ScreenContainer, LearningContainer, LearningPortal, CourseNavigation, CourseNavigationNav,  CourseNavigationContainer, CourseNavCollapseBtn, CourseNavTitle, NoLessonContainer } from '../styles/screens/CourseScreen.styles'
+import { ScreenContainer, LearningContainer, LearningPortal, CourseNavigation, CourseNavigationNav,  CourseNavigationContainer, CourseNavCollapseBtn, CourseNavTitle, NoLessonContainer, NoLessonResourcesContainer} from '../styles/screens/CourseScreen.styles'
 import CourseNavSection from '../components/CourseNavSection';
 import UserLessonVideo from '../components/UserLessonVideo';
 import UserLessonResource from '../components/UserLessonResource';
+import NoLessonComponent from '../components/NoLessonComponent';
 
 const CourseScreen = ({ user }) => {
   let { id } = useParams();
@@ -36,8 +37,8 @@ const CourseScreen = ({ user }) => {
     <ScreenContainer>
       <LearningContainer>
         <LearningPortal courseNavActive={courseNavActive}>
-           {Object.keys(activeLesson).length > 0 ? <UserLessonVideo lesson={activeLesson}/> : <NoLessonContainer>No Lesson</NoLessonContainer>}
-           <UserLessonResource lesson={activeLesson}/>
+           {Object.keys(activeLesson).length > 0 ? <UserLessonVideo lesson={activeLesson}/> : <NoLessonComponent course={course}>No Lesson</NoLessonComponent>}
+           {Object.keys(activeLesson).length > 0 ? <UserLessonResource lesson={activeLesson}/> : <NoLessonResourcesContainer>no resources</NoLessonResourcesContainer>}
         </LearningPortal>
         <CourseNavigation courseNavActive={courseNavActive}>
           <CourseNavigationNav courseNavActive={courseNavActive}>

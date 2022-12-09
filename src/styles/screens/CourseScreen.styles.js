@@ -98,7 +98,8 @@ export const NoLessonContainer = styled.div`
   justify-content: center;
 `
 
-// -------------------------------- course navigation styling END ---------------------------------------
-
+export const NoLessonResourcesContainer = styled.div`
+  display: none;
+`
 
 //this is where resources for lesson will live - has a navigation bar and container with respective info. 

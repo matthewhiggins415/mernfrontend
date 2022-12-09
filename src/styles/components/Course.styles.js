@@ -33,3 +33,16 @@ export const EditBtn = styled.button`
     color: black;
   }
 `
+
+export const Button = styled.button`
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px auto;
+  color: white;
+  background-color: transparent;
+  border: 2px solid lightgreen;
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 10px;
+  text-decoration: none;
+`
