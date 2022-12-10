@@ -21,7 +21,7 @@ const AdminLessonModal = ({ user, activateModal, showModal, setLesson, lesson })
     <ModalContainer showModal={showModal}>
       <ModalFormContainer>
         <ModalHeader>
-          <h3>Edit Lesson</h3>
+          <h3>Add Lesson Video</h3>
           <ModalCloseBtn onClick={() => activateModal()}> &#10005; </ModalCloseBtn>
         </ModalHeader>
         <ModalForm onSubmit={handleSubmit}>

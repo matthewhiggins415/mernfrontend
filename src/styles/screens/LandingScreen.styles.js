@@ -117,6 +117,7 @@ export const ProjectContainer = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
 `
+
 export const ProjectCard = styled.div`
   height: 400px;
   width: 80%;
@@ -164,4 +165,38 @@ export const GetStartedBtn = styled.button`
     color: black;
     background-color: lightgreen;
   }
+`
+
+export const ValueSection = styled.div`
+  min-height: 90vh;
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+`
+
+export const CardContainer = styled.div`
+  min-height: 400px;
+  min-width: 400px;
+  width: 80%;
+  height: 80%;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+`
+
+export const Card = styled.div`
+  height: 400px;
+  width: 250px;
+  border: 1px solid green;
+  margin: 30px auto;
+`
+
+export const SlackContainer = styled.div`
+  width: 80%;
+  height: 80vh;
+  background-color: white;
 `

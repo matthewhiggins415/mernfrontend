@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Hero, TitleWrapper, TopTitle, BottomTitle, SweetTitle, AskSection,ProjectContainer, ProjectCard, OfferList, Image, GetStartedBtn } from '../styles/screens/LandingScreen.styles';
+import { Container, Hero, TitleWrapper, TopTitle, BottomTitle, SweetTitle, AskSection,ProjectContainer, ProjectCard, OfferList, Image, GetStartedBtn, ValueSection, CardContainer, Card, SlackContainer} from '../styles/screens/LandingScreen.styles';
 
 const Landing = () => {
   return (
@@ -14,6 +14,17 @@ const Landing = () => {
           <BottomTitle className="bottom-title">using MERN</BottomTitle>
         </TitleWrapper>
       </Hero>
+      <ValueSection>
+        <CardContainer>
+          <Card>
+          </Card>
+          <Card>
+          </Card>
+          <Card>
+          </Card>
+        </CardContainer>
+        <SlackContainer>video of slack questions</SlackContainer>
+      </ValueSection>
       <ProjectContainer>
         <OfferList>
           <ul>
@@ -31,16 +42,16 @@ const Landing = () => {
       </ProjectContainer>
       <AskSection>
         <h2>
-        Learning to code is like climbing a mountain. And climbing a mountain is a hell of a lot easier with a trusted route, companions, and a sherpa. 
+        Building a deployed project is like climbing a mountain. And climbing a mountain is a hell of a lot easier with a trusted route, companions, and a guide. 
         <br></br>
         <br></br>
         MERN stands for MongoDB, Express, React, and Node - these technologies are popular, modern, used to create fullstack web apps, and all rely on one language - JavaScript. Combined together, they are very powerful. 
         <br></br>
         <br></br>
-        In these courses you will create fully deployed web apps. Not a silly calculator app or to-do list. Something meaningful & impressive from start to finish. You will have lessons for each step and Slack channels to ask questions and conversate with colleagues.
+        In these courses you will create fully deployed web apps. Not a silly calculator app or to-do list. Something meaningful & impressive from start to finish. You will have guidance for each step and Slack channels to ask specific questions and connect with colleagues also working on the same course.
         <br></br>
         <br></br>
-        If you have questions leave your email and I will reach out when I have the time.
+        If you have questions leave your email :^)
         </h2>
       </AskSection>
     </Container>

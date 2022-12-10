@@ -61,7 +61,7 @@ const AdminSectionScreen = ({ user }) => {
           
         <InfoContainer>
           <InfoContainerHeader>
-            <h2>Section Lessons:</h2>
+            <h2>Lessons:</h2>
             <BtnContainer>
               <Btn onClick={() => createLesson(user, section.course_id, id)}>new lesson</Btn>
             </BtnContainer>

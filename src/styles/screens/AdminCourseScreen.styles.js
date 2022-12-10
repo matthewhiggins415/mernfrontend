@@ -40,7 +40,7 @@ export const InfoContainerHeader = styled.div`
 export const BtnContainer = styled.div`
   display: flex;
   background-color: transparent;
-  align-items: end;
+  align-items: center;
 `
 export const Btn = styled.button`
   padding: 5px;
