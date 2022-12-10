@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, QuestionContainer, Question, Answer, H1 } from '../styles/screens/FaqScreen.styles'
+import { Container, QuestionContainer, Question, Answer, H1, GreenLink } from '../styles/screens/FaqScreen.styles'
 
 const Faq = () => {
   return (
@@ -25,6 +25,31 @@ const Faq = () => {
         <Answer>Yes, you should know some basics. Things like props, useState, & useEffect.</Answer>  
       </QuestionContainer>
 
+      <QuestionContainer>
+        <Question>Do I need to know React?</Question>
+        <Answer>Yes, you should know some basics. Things like props, useState, & useEffect.</Answer>  
+      </QuestionContainer>
+      <QuestionContainer>
+        <Question>Do I need to know React?</Question>
+        <Answer>Yes, you should know some basics. Things like props, useState, & useEffect.</Answer>  
+      </QuestionContainer>
+      <QuestionContainer>
+        <Question>Do I need to know React?</Question>
+        <Answer>Yes, you should know some basics. Things like props, useState, & useEffect.</Answer>  
+      </QuestionContainer>
+      <QuestionContainer>
+        <Question>Do I need to know React?</Question>
+        <Answer>Yes, you should know some basics. Things like props, useState, & useEffect.</Answer>  
+      </QuestionContainer>
+      <QuestionContainer>
+        <Question>Do I need to know React?</Question>
+        <Answer>Yes, you should know some basics. Things like props, useState, & useEffect.</Answer>  
+      </QuestionContainer>
+      <QuestionContainer>
+        <Question>Do I need to know React?</Question>
+        <Answer>Yes, you should know some basics. Things like props, useState, & useEffect.</Answer>  
+      </QuestionContainer>
+      <GreenLink to='/register' >sign up now</GreenLink>
     </Container>
   )
 }

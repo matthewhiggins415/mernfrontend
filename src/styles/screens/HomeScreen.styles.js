@@ -19,7 +19,6 @@ export const Container = styled.div`
   padding: 30px;
   margin: auto;
   color: white;
-  border: 1px solid red;
 
   @media (max-width: 700px) {
     width: 90%;
@@ -60,4 +59,13 @@ export const InspirationalDiv = styled.div`
   font-size: 20px;
   box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
   border-radius: 20px;
+`
+
+export const CoursesContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+  flex-wrap: wrap;
+  min-height: 30vh;
 `

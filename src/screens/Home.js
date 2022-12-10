@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; 
 import { getAllPublishedCourses } from '../api/course';
-import { HomeScreenContainer, Container, Hero, Img, InspirationalDiv } from '../styles/screens/HomeScreen.styles';
+import { HomeScreenContainer, Container, Hero, Img, InspirationalDiv, CoursesContainer } from '../styles/screens/HomeScreen.styles';
 import Course from '../components/Course';
 import img from '../assets/homebackground.jpg'
 
@@ -25,12 +25,15 @@ const Home = ({ user }) => {
       </Hero>
       <Container>
         <h1>Your courses:</h1>
-      {courses.map((course, index) => (
-        <Course id={course._id} course={course} key={index}/>
-      ))}
+      
       </Container>
       <Container>
         <h1>Other Courses:</h1>
+        <CoursesContainer>
+          {courses.map((course, index) => (
+            <Course id={course._id} course={course} key={index}/>
+          ))}
+        </CoursesContainer>
       </Container>
     </HomeScreenContainer>
   )

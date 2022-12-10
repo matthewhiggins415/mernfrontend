@@ -66,7 +66,7 @@ const Navbar = ({ user }) => {
         </LeftContainer>
         <RightContainer>
           <NavbarLinkContainer>
-            <NavbarLink to="/">MERNguide</NavbarLink>
+            <NavbarLink to="/">Tooti</NavbarLink>
           </NavbarLinkContainer>
         </RightContainer>
       </NavbarInnerContainer>

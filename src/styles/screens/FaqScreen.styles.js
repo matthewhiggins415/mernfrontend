@@ -1,8 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   width: 100%;
-  height: 90vh;
+  height: auto;
+  min-height: 90vh;
   background-color: black;
   display: flex;
   padding: 20px;
@@ -35,4 +37,35 @@ export const Question = styled.h2`
 
 export const Answer = styled.h3`
   color: white;
+`
+
+export const GreenLink = styled(Link)`
+  border: 2px solid lightgreen;
+  background-color: black;
+  position: fixed;
+  left: calc(100vw / 3);
+  bottom: 30px;
+  padding: 15px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  width: 50vw;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+  font-weight: 600;
+  font-size: 20px;
+  transition: 150ms ease-in-out;
+
+  :hover {
+    background-color: lightgreen;
+    color: black;
+  }
+
+  @media (max-width: 700px) {
+    left: calc(100vw / 4);
+  }
 `

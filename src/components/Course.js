@@ -5,7 +5,7 @@ const Course = ({id, course}) => {
   return (
     <Container to={`/course/${id}`}>
       <H2>{course.title}</H2>
-      <Button>{"$" + course.price}</Button>
+      <H2>{"$" + course.price}</H2>
     </Container>
   )
 }

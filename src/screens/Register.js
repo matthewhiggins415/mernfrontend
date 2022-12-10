@@ -70,6 +70,7 @@ const Register = ({ notify, setUser }) => {
       <Container>
         <H2>Sign Up</H2>
         <FormContainer onSubmit={onRegister}>
+          <p style={{"color": "white"}}>This email will be used to invite you to Discord</p>
           <Input type="text" name="email" value={email} placeholder="email" onChange={onChange} required/>
           <Input type="password" name="password" value={password} placeholder="password" onChange={onChange} required/>
           <Input type="password" name="passwordConfirmation" value={passwordConfirmation} placeholder="confirm password" onChange={onChange} required/>

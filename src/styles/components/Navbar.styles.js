@@ -40,10 +40,11 @@ export const NavbarLinkContainer = styled.div`
 `
 
 export const NavbarLink = styled(Link)`
-  color: white;
+  color: pink;
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
+  letter-spacing: 1.2px;
   margin: 10px;
 
   @media (max-width: 700px) {

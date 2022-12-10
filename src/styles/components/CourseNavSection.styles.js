@@ -51,8 +51,10 @@ export const LessonContainerBtn = styled.button`
   cursor: pointer;
   transition: 150ms ease-in-out;
   border: none;
+  text-align: left;
 
   :hover {
-    color: lightgreen;
+    background-color: lightgreen;
+    color: black;
   }
 `

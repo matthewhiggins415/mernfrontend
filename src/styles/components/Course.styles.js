@@ -13,6 +13,7 @@ export const Container = styled(Link)`
   cursor: pointer;
   max-width: 200px;
   min-height: 60%;
+  text-decoration: none;
 `
 
 export const H2 = styled.h2`

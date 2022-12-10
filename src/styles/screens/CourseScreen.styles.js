@@ -24,7 +24,7 @@ export const LearningContainer = styled.div`
 
 // Learning portal is where video and resources will live within column 
 export const LearningPortal = styled.div`
-  width: ${(props) => (props.courseNavActive ? "80%" : "100%")};
+  width: ${(props) => (props.courseNavActive ? "70%" : "100%")};
   display: flex;
   flex-direction: column; 
   background-color: transparent;
@@ -36,7 +36,7 @@ export const LearningPortal = styled.div`
 `
 
 export const CourseNavigation = styled.div`
-  width: ${(props) => (props.courseNavActive ? "20%" : "auto")};
+  width: ${(props) => (props.courseNavActive ? "30%" : "auto")};
   height: 100%;
   display: flex;
   flex-direction: column;

@@ -6,14 +6,15 @@ const UserLessonResource = ({ lesson }) => {
   console.log("lesson from lesson resource section: ", lesson)
   return (
     <ResourceContainer>
-      <h1>{`${lesson.title} Information`}</h1>
+      <h1>{lesson.title + ":"}</h1>
       <LessonResourceDiv>
-        <h3>Goal</h3>
-        <p>{lesson.goal}</p>
+        <h4>{lesson.goal}</h4>
       </LessonResourceDiv>
       <LessonResourceDiv>
-        <h3>Repo</h3>
-        <p>{lesson.repo}</p>
+        <h4>{lesson.repo}</h4>
+      </LessonResourceDiv>
+      <LessonResourceDiv>
+        <h4>{lesson.slack}</h4>
       </LessonResourceDiv>
       <LessonResourceDiv>
         <h3>Resources</h3>
@@ -23,10 +24,6 @@ const UserLessonResource = ({ lesson }) => {
             <p>{resource.description}</p>
           </div>
         )) : <p>no resources</p> } */}
-      </LessonResourceDiv>
-      <LessonResourceDiv>
-        <h3>Slack</h3>
-        <p>{lesson.slack}</p>
       </LessonResourceDiv>
     </ResourceContainer>
   )
