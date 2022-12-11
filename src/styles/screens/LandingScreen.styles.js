@@ -200,3 +200,11 @@ export const SlackContainer = styled.div`
   height: 80vh;
   background-color: white;
 `
+
+export const VidContainer = styled.div`
+  min-height: 660px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

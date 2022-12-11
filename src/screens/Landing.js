@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Hero, TitleWrapper, TopTitle, BottomTitle, SweetTitle, AskSection,ProjectContainer, ProjectCard, OfferList, Image, GetStartedBtn, ValueSection, CardContainer, Card, SlackContainer} from '../styles/screens/LandingScreen.styles';
+import { Container, Hero, TitleWrapper, TopTitle, BottomTitle, SweetTitle, AskSection,ProjectContainer, ProjectCard, OfferList, Image, GetStartedBtn, ValueSection, CardContainer, Card, SlackContainer, VidContainer} from '../styles/screens/LandingScreen.styles';
 
 const Landing = () => {
   return (
@@ -25,6 +25,11 @@ const Landing = () => {
         </CardContainer>
         <SlackContainer>video of slack questions</SlackContainer>
       </ValueSection>
+
+      <VidContainer>
+        <iframe src='https://videos.sproutvideo.com/embed/ea9fddbc1215e9c063/278098555b7d4566?bigPlayButton=false' style={{'width':'100%','height':'550px','left':'0','top':'0' }}allowFullScreen referrerPolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
+      </VidContainer>
+
       <ProjectContainer>
         <OfferList>
           <ul>

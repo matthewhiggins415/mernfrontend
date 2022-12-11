@@ -7,6 +7,7 @@ const EditLessonModal = ({ user, ActiveEditLessonModal, showLessonEditModal, set
   const [repo, setRepo] = useState(lesson.repo);
   const [goal, setGoal] = useState(lesson.goal);
   const [slack, setSlack] = useState(lesson.slack);
+  const [video, setVideo] = useState(lesson.video)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +16,8 @@ const EditLessonModal = ({ user, ActiveEditLessonModal, showLessonEditModal, set
       title: title,
       repo: repo, 
       goal: goal, 
-      slack: slack
+      slack: slack, 
+      video: video
     }
     
     let response = await updateALesson(data, user, lesson._id)
@@ -36,6 +38,7 @@ const EditLessonModal = ({ user, ActiveEditLessonModal, showLessonEditModal, set
           <Input defaultValue={repo} type="text" placeholder={lesson.repo} onChange={(e) => {setRepo(e.target.value)}}/>
           <Input defaultValue={goal} type="textarea" rows="5" placeholder={lesson.goal} onChange={(e) => {setGoal(e.target.value)}}/>
           <Input defaultValue={slack} type="text" placeholder={lesson.slack} onChange={(e) => {setSlack(e.target.value)}}/>
+          <Input defaultValue={video} type="text" placeholder={lesson.video} onChange={(e) => {setVideo(e.target.value)}}/>
           <Btn type="submit">Submit</Btn>
         </ModalForm>
       </ModalFormContainer>

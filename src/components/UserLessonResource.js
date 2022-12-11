@@ -25,6 +25,9 @@ const UserLessonResource = ({ lesson }) => {
           </div>
         )) : <p>no resources</p> } */}
       </LessonResourceDiv>
+      <LessonResourceDiv>
+        <h4>{lesson.video}</h4>
+      </LessonResourceDiv>
     </ResourceContainer>
   )
 }

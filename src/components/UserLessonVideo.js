@@ -6,7 +6,8 @@ const UserLessonVideo = ({ lesson }) => {
   let { video } = lesson
   return (
     <UserVideoContainer>
-      <LessonVideo autoplay controls crossOrigin="anonymous" loop src={`http://localhost:5000/video/${video}`} type="video/quicktime"></LessonVideo>
+      <iframe src={lesson.video} style={{'width':'100%','height':'550px','left':'0','top':'0', 
+"border":"none" }} allowFullScreen referrerPolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
     </UserVideoContainer>
   )
 }
