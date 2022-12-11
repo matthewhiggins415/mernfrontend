@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const LoginButton = styled.button`
-  width: 100%;
+  width: 90%;
   padding: 15px 0;
   background-color: lightgreen;
   border: 1px solid lightgreen;

@@ -8,9 +8,9 @@ const Pricing = () => {
       <PricingInfoContainer>
         <PricingOfferContainer>
           <H1>What we offer:</H1>
-          <H2>Step by step guidance of how to make web apps</H2>
-          <H2>Discord communities to discuss questions/challenges</H2>
-          <H2>Access to Github project repos</H2>
+          <H2>Step by step guidance of how to make & deploy fullstack web apps</H2>
+          <H2>Access to Discord communities to discuss questions/challenges</H2>
+          <H2>Access to Github project repos to see progress of every step</H2>
           <H1 style={{color: 'white'}}>$200/course</H1>
 
         </PricingOfferContainer>

@@ -26,20 +26,16 @@ const Landing = () => {
         <SlackContainer>video of slack questions</SlackContainer>
       </ValueSection>
 
-      <VidContainer>
-        <iframe src='https://videos.sproutvideo.com/embed/ea9fddbc1215e9c063/278098555b7d4566?bigPlayButton=false' style={{'width':'100%','height':'550px','left':'0','top':'0' }}allowFullScreen referrerPolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
-      </VidContainer>
-
       <ProjectContainer>
         <OfferList>
           <ul>
-            <li>Slack support for project questions</li>
-            <li>Slack to connect with other students</li>
+            <li>Immediate Discord support for project questions</li>
+            <li>Discord to connect with other students</li>
             <li>step-by-step videos</li>
             <li>Real projects with 3rd party APIs</li>
             <li>Git & Github guidance</li>
           </ul>
-          <GetStartedBtn>Get Started</GetStartedBtn>
+          <GetStartedBtn to="/register">Get Started</GetStartedBtn>
         </OfferList>
         <ProjectCard>
           <h2>Project 12</h2>

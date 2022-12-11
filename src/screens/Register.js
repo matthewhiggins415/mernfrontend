@@ -69,14 +69,14 @@ const Register = ({ notify, setUser }) => {
     <RegisterScreenContainer>
       <Container>
         <H2>Sign Up</H2>
+          <p style={{"color": "white"}}>This email will be used to invite you to Discord & Github</p>
         <FormContainer onSubmit={onRegister}>
-          <p style={{"color": "white"}}>This email will be used to invite you to Discord</p>
           <Input type="text" name="email" value={email} placeholder="email" onChange={onChange} required/>
           <Input type="password" name="password" value={password} placeholder="password" onChange={onChange} required/>
           <Input type="password" name="passwordConfirmation" value={passwordConfirmation} placeholder="confirm password" onChange={onChange} required/>
           <LoginButton type="submit">Sign Up</LoginButton>
         </FormContainer>
-        <GreenBorderLink to='/pricing'>view plans</GreenBorderLink>
+        <GreenBorderLink to='/pricing'>view offer</GreenBorderLink>
       </Container>
     </RegisterScreenContainer>
   )

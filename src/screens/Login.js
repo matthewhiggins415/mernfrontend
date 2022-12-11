@@ -58,7 +58,7 @@ const Login = ({ notify, setUser }) => {
   return (
     <LoginScreenContainer>
       <Container>
-        <H2>Sign In</H2>
+        <H2>Welcome Back</H2>
         <FormContainer onSubmit={onSignIn}>
           <Input type="text" name="email" value={email} placeholder="enter email" onChange={onChange} required/>
           <Input type="password" name="password" value={password} placeholder="enter pw" onChange={onChange} required/>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   min-height: 90vh;
@@ -151,7 +152,7 @@ export const OfferList = styled.div`
   }
 `
 
-export const GetStartedBtn = styled.button`
+export const GetStartedBtn = styled(Link)`
   padding: 20px;
   border-radius: 10px;
   border: 3px solid lightgreen;
@@ -160,6 +161,8 @@ export const GetStartedBtn = styled.button`
   font-size: 25px;
   transition: 150ms ease-in-out;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 
   :hover {
     color: black;

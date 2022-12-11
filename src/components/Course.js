@@ -3,7 +3,7 @@ import { Container, H2, EditBtn, Button } from '../styles/components/Course.styl
 
 const Course = ({id, course}) => {
   return (
-    <Container to={`/course/${id}`}>
+    <Container to={`/coursehome/${id}`}>
       <H2>{course.title}</H2>
       <H2>{"$" + course.price}</H2>
     </Container>
