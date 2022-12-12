@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { getASingleCourse, DestroyACourse } from '../api/course';
-import { Container, InfoContainer, InfoContainerHeader, BtnContainer, Btn, SectionContainer, BackBtn, DeleteBtn } from '../styles/screens/AdminCourseScreen.styles'
+import { Container, InfoContainer, InfoContainerHeader, BtnContainer, Btn, SectionContainer, BackBtn, DeleteBtn, Span } from '../styles/screens/AdminCourseScreen.styles'
 import AdminSection from '../components/AdminSection';
 import AdminCourseModal from '../components/AdminCourseModal';
 
@@ -71,9 +71,13 @@ const AdminCourseScreen = ({ user }) => {
           </BtnContainer>
         </InfoContainerHeader>
         <div>
-          <p>{course.title}</p>
-          <p>published: {`${course.isPublished}`}</p>
-          <p>created: {course.createdAt}</p>
+          <p><Span>course title:</Span> {course.title}</p>
+          <p><Span>published:</Span> {`${course.isPublished}`}</p>
+          <p><Span>description:</Span> {`${course.about}`}</p>
+          <p><Span>discord link:</Span> {`${course.discord}`}</p>
+          <p><Span>price:</Span> {`${course.price}`}</p>
+          <p><Span>summary video link:</Span> {`${course.video}`}</p>
+          <p><Span>thumbnail url:</Span> {`${course.thumbnail}`}</p>
         </div>
       </InfoContainer>
 

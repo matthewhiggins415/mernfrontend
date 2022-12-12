@@ -14,9 +14,6 @@ const UserLessonResource = ({ lesson }) => {
         <h4>{lesson.repo}</h4>
       </LessonResourceDiv>
       <LessonResourceDiv>
-        <h4>{lesson.slack}</h4>
-      </LessonResourceDiv>
-      <LessonResourceDiv>
         <h3>Resources</h3>
         {/* { resources.length > 0 ? resources.map((resource) => (
           <div>

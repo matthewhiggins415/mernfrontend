@@ -37,6 +37,15 @@ export const getASingleCourse = (user, id) => {
   })
 }
 
+// get a single course 
+export const getCourseBasics = (user, id) => {
+  return axios.get(apiUrl + `/courses/basics/${id}`, {
+    headers: {
+    Authorization: `Bearer ${user.token}`
+    }
+  })
+}
+
 // edit a single course 
 export const editACourse = (data, user, id) => {
   return axios.put(apiUrl + `/course/${id}`, {

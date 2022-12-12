@@ -63,7 +63,6 @@ const AdminLessonScreen = ({ user }) => {
           <p>{lesson.video}</p>
           <p>{lesson.repo}</p>
           <p>{lesson.goal}</p>
-          <p>{lesson.slack}</p>
         </InfoContainer>
       </Container>
     </>

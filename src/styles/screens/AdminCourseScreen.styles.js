@@ -137,3 +137,7 @@ export const DeleteBtn = styled.button`
     background-color: red;
   }
 `
+
+export const Span = styled.span`
+  color: lightgreen;
+`
