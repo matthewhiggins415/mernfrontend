@@ -7,7 +7,6 @@ const CourseNavSection = ({ section, handleLessonSelect }) => {
 
   const handleSectionActive = () => {
     setSectionNavActive(!sectionNavActive)
-    console.log(lessons)
   }
 
   return (

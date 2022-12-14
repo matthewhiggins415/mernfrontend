@@ -11,7 +11,7 @@ const CourseHomeScreen = ({ user }) => {
   useEffect(() => {
     const fetchCourse = async (user, id) => {
       let response = await getCourseBasics(user, id);
-      console.log(response)
+      console.log("course basics:", response)
       setCourse(response.data.course);
     }
 
@@ -27,7 +27,7 @@ const CourseHomeScreen = ({ user }) => {
         <InfoContainer>
           <h1 styles={{color: "white"}}>{course.title}</h1>
           <p>{course.about}</p>
-          <BuyBtn>{"$" + course.price}</BuyBtn>
+          <BuyBtn to={`/course/${course._id}`}>Continue to course</BuyBtn>
         </InfoContainer>
       </Container>
     </Screen>

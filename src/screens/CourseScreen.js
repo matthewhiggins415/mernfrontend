@@ -30,6 +30,7 @@ const CourseScreen = ({ user }) => {
   }
 
   const handleLessonSelect = (lesson) => {
+    console.log('lesson selected', lesson)
     setActiveLesson(lesson)
   }
 
@@ -37,7 +38,7 @@ const CourseScreen = ({ user }) => {
     <ScreenContainer>
       <LearningContainer>
         <LearningPortal courseNavActive={courseNavActive}>
-           {Object.keys(activeLesson).length > 0 ? <UserLessonVideo lesson={activeLesson}/> : <NoLessonComponent course={course}>No Lesson</NoLessonComponent>}
+           {Object.keys(activeLesson).length > 0 ? <UserLessonVideo lesson={activeLesson}/> : <NoLessonComponent >No Lesson</NoLessonComponent>}
            {Object.keys(activeLesson).length > 0 ? <UserLessonResource lesson={activeLesson}/> : <NoLessonResourcesContainer>no resources</NoLessonResourcesContainer>}
         </LearningPortal>
         <CourseNavigation courseNavActive={courseNavActive}>
@@ -46,7 +47,7 @@ const CourseScreen = ({ user }) => {
             <CourseNavTitle courseNavActive={courseNavActive}>Course Nav</CourseNavTitle>
           </CourseNavigationNav>
           <CourseNavigationContainer courseNavActive={courseNavActive}>
-            { sections.length > 0 ?  sections.map((section) => (
+            { sections.length > 0 ? sections.map((section) => (
               <CourseNavSection key={section._id} section={section} handleLessonSelect={handleLessonSelect}/>
             )) : 'no sections'}
           </CourseNavigationContainer>

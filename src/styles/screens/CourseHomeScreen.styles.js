@@ -33,17 +33,20 @@ export const InfoContainer = styled.div`
   justify-content: space-evenly;
 `
 
-export const BuyBtn = styled.button`
+export const BuyBtn = styled(Link)`
   width: 30%;
   padding: 10px;
   margin: 0 auto;
-  border: 1px solid lightgreen;
+  border: 3px solid lightgreen;
+  border-radius: 10px;
   background-color: transparent;
   color: lightgreen;
   font-size: 30px;
   cursor: pointer;
   transition: 150ms ease-in-out;
-  
+  text-align: center;
+  text-decoration: none;
+
   :hover {
     color: black;
     background-color: lightgreen;

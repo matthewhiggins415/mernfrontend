@@ -11,7 +11,8 @@ export const Container = styled(Link)`
   margin: 10px 0px;
   align-items: center;
   cursor: pointer;
-  max-width: 200px;
+  max-width: 350px;
+  min-width: 250px;
   min-height: 60%;
   text-decoration: none;
 `
@@ -46,4 +47,9 @@ export const Button = styled.button`
   font-size: 30px;
   border-radius: 10px;
   text-decoration: none;
+`
+export const Img = styled.img`
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
 `
