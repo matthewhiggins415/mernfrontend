@@ -20,8 +20,8 @@ const CourseHomeScreen = ({ user }) => {
 
   return (
     <Screen>
-      <BackBtn to={`/home`}>Back</BackBtn>
       <Container>
+        <BackBtn to={`/home`}>Back</BackBtn>
         <iframe src={course.video} style={{'width':'100%','height':'550px','left':'0','top':'0', 
 "border":"none" }} allowFullScreen referrerPolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
         <InfoContainer>

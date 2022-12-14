@@ -10,6 +10,7 @@ export const Screen = styled.div`
 `
 
 export const BackBtn = styled(Link)`
+display: block;
   width: 60px;
   text-align: center;
   text-decoration: none;
@@ -22,6 +23,7 @@ export const BackBtn = styled(Link)`
 `
 
 export const Container = styled.div`
+  height: auto;
   width: 90%;
   margin: 20px auto;
 `

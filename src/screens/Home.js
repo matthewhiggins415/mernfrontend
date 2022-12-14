@@ -25,7 +25,6 @@ const Home = ({ user }) => {
       </Hero>
       <Container>
         <h1>Your courses:</h1>
-      
       </Container>
       <Container>
         <h1>Other Courses:</h1>
