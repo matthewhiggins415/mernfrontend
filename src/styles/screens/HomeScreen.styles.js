@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import img from '../../assets/homebackground.jpg'
 
 export const HomeScreenContainer = styled.div`
-  min-height: 180vh;
+  min-height: 200vh;
+  height: auto;
   margin: 0px;
   width: 100%;
   background: linear-gradient(black, #202020);

@@ -26,7 +26,7 @@ const Home = ({ user }) => {
       <Container>
         <h1>Your courses:</h1>
       </Container>
-      <Container>
+      <Container style={{"backgroundColor": 'black', 'borderRadius': '20px'}}>
         <h1>Other Courses:</h1>
         <CoursesContainer>
           {courses.map((course, index) => (
