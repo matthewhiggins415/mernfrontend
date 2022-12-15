@@ -10,6 +10,7 @@ const AdminCourseModal = ({ user, activateModal, showModal, course, setCourse}) 
   const [discord, setDiscord] = useState(course.discord);
   const [video, setVideo] = useState(course.setVideo);
   const [price, setPrice] = useState(course.price);
+  const [introductionVid, setIntroductionVid] = useState(course.introductionVideo)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,7 +23,8 @@ const AdminCourseModal = ({ user, activateModal, showModal, course, setCourse}) 
       about: about, 
       discord: discord, 
       video: video, 
-      price: price
+      price: price, 
+      introductionVid: introductionVid
     }
 
     const response = await editACourse(newCourse, user, course._id)
@@ -45,6 +47,7 @@ const AdminCourseModal = ({ user, activateModal, showModal, course, setCourse}) 
           <Input value={discord} type="text" placeholder={course.discord} onChange={(e) => {setDiscord(e.target.value)}}/> 
           <Input value={video} type="text" placeholder={course.video} onChange={(e) => {setVideo(e.target.value)}}/> 
           <Input value={price} type="text" placeholder={course.price} onChange={(e) => {setPrice(e.target.value)}}/> 
+          <Input value={introductionVid} type="text" placeholder={course.introductionVideo} onChange={(e) => {setIntroductionVid(e.target.value)}}/> 
           <CheckboxContainer>
             <label>Published</label>
             <input type="checkbox" value={published} onChange={(e) => {setPublished(!published)}} />

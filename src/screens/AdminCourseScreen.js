@@ -78,6 +78,7 @@ const AdminCourseScreen = ({ user }) => {
           <p><Span>price:</Span> {`${course.price}`}</p>
           <p><Span>summary video link:</Span> {`${course.video}`}</p>
           <p><Span>thumbnail url:</Span> {`${course.thumbnail}`}</p>
+          <p><Span>introduction video url:</Span> {`${course.introductionVideo}`}</p>
         </div>
       </InfoContainer>
 
