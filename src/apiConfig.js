@@ -1,7 +1,7 @@
 let apiUrl
 
 const apiUrls = {
-  production: 'this is where we will put the deployed api url',
+  production: 'https://limitless-island-57755.herokuapp.com',
   development: 'http://localhost:5000'
 }
 
