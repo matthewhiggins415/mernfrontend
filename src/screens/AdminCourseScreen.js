@@ -45,7 +45,7 @@ const AdminCourseScreen = ({ user }) => {
 
   const deleteCourse = async (user, id) => {
     let response = await DestroyACourse(user, id)
-    console.log(response)
+    console.log("response:", response)
     setRedirect(true)
   }
 

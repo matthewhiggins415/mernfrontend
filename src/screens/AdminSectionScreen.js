@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import AdminLesson from '../components/AdminLesson'
 import { Container, InfoContainer, InfoContainerHeader, BtnContainer, Btn, SectionContainer, BackBtn, DeleteBtn } from '../styles/screens/AdminCourseScreen.styles';
 import AdminSectionModal from '../components/AdminSectionModal';
 
-import { getASingleSection } from '../api/section';
+import { getASingleSection, deleteASection } from '../api/section';
 import { createALesson, deleteALesson } from '../api/lesson';
 
 const AdminSectionScreen = ({ user }) => { 
@@ -12,6 +13,7 @@ const AdminSectionScreen = ({ user }) => {
   const [section, setSection] = useState({});
   const [lessons, setLessons] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [redirect, setRedirect] = useState(false)
 
   useEffect(() => {
     const fetchSection = async (user, id) => {
@@ -36,8 +38,23 @@ const AdminSectionScreen = ({ user }) => {
     setLessons(response.data.lessons)
   }
 
+  const deleteSection = async (user, course, section) => {
+    console.log("clicked")
+    try {
+      let response = await deleteASection(user, course, section)
+      console.log("response", response)
+      setRedirect(true)
+    } catch (e) {
+      console.log("something went wrong")
+    }
+  }
+
   const activateModal = () => {
     setShowModal(!showModal)
+  }
+
+  if (redirect) {
+    return <Navigate to={`/admin/course/${section.course_id}`}/>
   }
 
   return (
@@ -50,7 +67,7 @@ const AdminSectionScreen = ({ user }) => {
               <h2>Section Info:</h2>
               <BtnContainer>
                 <Btn onClick={() => activateModal()}>edit</Btn>
-                <Btn>delete</Btn>
+                <Btn onClick={() => deleteSection(user, section.course_id, section._id)}>delete</Btn>
               </BtnContainer>
           </InfoContainerHeader>
           <div>
