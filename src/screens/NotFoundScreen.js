@@ -2,7 +2,7 @@ import React from 'react'
 
 const NotFoundScreen = () => {
   return (
-    <div>NotFoundScreen</div>
+    <div>Jeanna messed it up lol</div>
   )
 }
 
