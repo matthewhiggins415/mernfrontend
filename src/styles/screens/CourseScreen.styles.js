@@ -29,6 +29,7 @@ export const LearningPortal = styled.div`
   flex-direction: column; 
   background-color: transparent;
   min-height: 600px;
+  letter-spacing: 1.1px;
 
   @media only screen and (max-width: 600px) {
     width: 100%;
