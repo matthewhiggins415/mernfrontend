@@ -14,7 +14,7 @@ const Landing = () => {
           <BottomTitle className="bottom-title">using MERN</BottomTitle>
         </TitleWrapper>
       </Hero>
-      <ValueSection>
+      {/* <ValueSection>
         <CardContainer>
           <Card>
           </Card>
@@ -24,7 +24,7 @@ const Landing = () => {
           </Card>
         </CardContainer>
         <SlackContainer>video of slack questions</SlackContainer>
-      </ValueSection>
+      </ValueSection> */}
 
       <ProjectContainer>
         <OfferList>
@@ -37,9 +37,9 @@ const Landing = () => {
           </ul>
           <GetStartedBtn to="/register">Get Started</GetStartedBtn>
         </OfferList>
-        <ProjectCard>
+        {/* <ProjectCard>
           <h2>Project 12</h2>
-        </ProjectCard>
+        </ProjectCard> */}
       </ProjectContainer>
       <AskSection>
         <h2>
