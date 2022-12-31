@@ -8,9 +8,11 @@ const UserLessonResource = ({ lesson }) => {
       <LessonResourceDiv>
         <h4>{lesson.goal}</h4>
       </LessonResourceDiv>
-      <LessonResourceDiv>
-        <a style={{ "color": "white", "letterSpacing": "1.3px"}} href={lesson.repo} target="_blank">github repo</a>
-      </LessonResourceDiv>
+      {lesson.repo !== 'http://repo-link.com' ? 
+        <LessonResourceDiv>
+          <a style={{ "color": "white", "letterSpacing": "1.3px"}} href={lesson.repo} target="_blank">github repo</a>
+        </LessonResourceDiv> 
+      : null}
     </ResourceContainer>
   )
 }
