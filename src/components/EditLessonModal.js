@@ -3,10 +3,10 @@ import { EditModalContainer, ModalFormContainer, ModalForm, ModalHeader, ModalCl
 import { updateALesson } from '../api/lesson';
 
 const EditLessonModal = ({ user, ActiveEditLessonModal, showLessonEditModal, setLesson, lesson }) => {
+  console.log("lesson from edit modal:", lesson)
   const [title, setTitle] = useState(lesson.title);
   const [repo, setRepo] = useState(lesson.repo);
   const [goal, setGoal] = useState(lesson.goal);
-  const [slack, setSlack] = useState(lesson.slack);
   const [video, setVideo] = useState(lesson.video)
 
   const handleSubmit = async (e) => {
@@ -16,7 +16,6 @@ const EditLessonModal = ({ user, ActiveEditLessonModal, showLessonEditModal, set
       title: title,
       repo: repo, 
       goal: goal, 
-      slack: slack, 
       video: video
     }
     
@@ -37,7 +36,6 @@ const EditLessonModal = ({ user, ActiveEditLessonModal, showLessonEditModal, set
           <Input defaultValue={title} type="text" placeholder={lesson.title} onChange={(e) => {setTitle(e.target.value)}}/>
           <Input defaultValue={repo} type="text" placeholder={lesson.repo} onChange={(e) => {setRepo(e.target.value)}}/>
           <Input defaultValue={goal} type="textarea" rows="5" placeholder={lesson.goal} onChange={(e) => {setGoal(e.target.value)}}/>
-          <Input defaultValue={slack} type="text" placeholder={lesson.slack} onChange={(e) => {setSlack(e.target.value)}}/>
           <Input defaultValue={video} type="text" placeholder={lesson.video} onChange={(e) => {setVideo(e.target.value)}}/>
           <Btn type="submit">Submit</Btn>
         </ModalForm>
