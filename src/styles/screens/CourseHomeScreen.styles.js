@@ -13,6 +13,7 @@ export const BackBtn = styled(Link)`
 display: block;
   width: 60px;
   text-align: center;
+  letter-spacing: 1px;
   text-decoration: none;
   padding: 10px;
   background-color: transparent;
@@ -37,10 +38,13 @@ export const InfoContainer = styled.div`
 
 export const Title = styled.h1`
   margin-top: 15px;
+  letter-spacing: 1.5px;
 `
 
 export const Description = styled.p`
   margin: 15px 0;
+  line-height: 1.5;
+  letter-spacing: 1px;
 `
 
 export const BuyBtn = styled(Link)`
@@ -56,6 +60,7 @@ export const BuyBtn = styled(Link)`
   transition: 150ms ease-in-out;
   text-align: center;
   text-decoration: none;
+  letter-spacing: 1.5px;
 
   :hover {
     color: black;

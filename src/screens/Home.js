@@ -29,9 +29,9 @@ const Home = ({ user }) => {
       <Container style={{"backgroundColor": 'black', 'borderRadius': '20px'}}>
         <h1>Other Courses:</h1>
         <CoursesContainer>
-          {courses.map((course, index) => (
+          {courses.length > 0 ? courses.map((course, index) => (
             <Course id={course._id} course={course} key={index}/>
-          ))}
+          )) : 'loading...'}
         </CoursesContainer>
       </Container>
     </HomeScreenContainer>
