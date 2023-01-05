@@ -15,6 +15,7 @@ export const GreenBorderLink = styled(Link)`
   font-weight: 600;
   font-size: 20px;
   transition: 150ms ease-in-out;
+  margin-top: 20px;
 
   :hover {
     background-color: lightgreen;

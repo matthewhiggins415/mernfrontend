@@ -86,21 +86,3 @@ export const CourseNavigationContainer = styled.div`
   margin: 0 auto;
   height: auto;
 `
-
-
-// this is the container for them lessons 
-export const NoLessonContainer = styled.div`
-  height: 70%;
-  background: transparent;
-  width: 100%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-export const NoLessonResourcesContainer = styled.div`
-  display: none;
-`
-
-//this is where resources for lesson will live - has a navigation bar and container with respective info. 

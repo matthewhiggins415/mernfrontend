@@ -5,7 +5,7 @@ import { LoginButton } from '../styles/components/Button.styles'
 import { RegisterScreenContainer, FormContainer, Container, H2 } from '../styles/screens/RegisterScreen.styles.js'
 import { GreenBorderLink } from '../styles/components/GreenBorderLink.styles'
 import { signUp } from '../api/auth'
-
+import { ToRegisterLink } from '../styles/screens/LoginScreen.styles'
 
 const Register = ({ notify, setUser }) => {
   const [shouldNavigate, setShouldNavigate] = useState(false)
@@ -76,6 +76,7 @@ const Register = ({ notify, setUser }) => {
           <Input type="password" name="passwordConfirmation" value={passwordConfirmation} placeholder="confirm password" onChange={onChange} required/>
           <LoginButton type="submit">Sign Up</LoginButton>
         </FormContainer>
+        <ToRegisterLink to="/login">Login</ToRegisterLink>
         <GreenBorderLink to='/pricing'>view offer</GreenBorderLink>
       </Container>
     </RegisterScreenContainer>

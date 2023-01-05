@@ -35,10 +35,18 @@ export const InfoContainer = styled.div`
   justify-content: space-evenly;
 `
 
+export const Title = styled.h1`
+  margin-top: 15px;
+`
+
+export const Description = styled.p`
+  margin: 15px 0;
+`
+
 export const BuyBtn = styled(Link)`
-  width: 30%;
+  width: 300px;
   padding: 10px;
-  margin: 0 auto;
+  margin: 15px auto;
   border: 3px solid lightgreen;
   border-radius: 10px;
   background-color: transparent;
