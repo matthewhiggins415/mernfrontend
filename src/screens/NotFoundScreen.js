@@ -1,8 +1,11 @@
 import React from 'react'
+import { NotFound, Container } from '../styles/screens/NotFoundScreen.styles'
 
 const NotFoundScreen = () => {
   return (
-    <div>Jeanna messed it up lol</div>
+    <Container>
+      <NotFound>404 Not Found</NotFound>
+    </Container>
   )
 }
 
