@@ -40,7 +40,6 @@ const AdminLessonScreen = ({ user }) => {
             <h2>Lesson Info:</h2>
             <BtnContainer>
               <Btn onClick={() => ActiveEditLessonModal()}>edit</Btn>
-              <Btn>delete</Btn>
             </BtnContainer>
           </InfoContainerHeader>
         </InfoContainer>
