@@ -66,7 +66,7 @@ const Navbar = ({ user }) => {
         </LeftContainer>
         <RightContainer>
           <NavbarLinkContainer>
-            <NavbarLink to="/">mernGuide</NavbarLink>
+            <NavbarLink to={user ? "/home" : "/"}>mernGuide</NavbarLink>
           </NavbarLinkContainer>
         </RightContainer>
       </NavbarInnerContainer>

@@ -22,6 +22,7 @@ import AdminSectionScreen from './screens/AdminSectionScreen';
 import AdminLessonScreen from './screens/AdminLessonScreen';
 import CourseHomeScreen from './screens/CourseHomeScreen';
 import NotFoundScreen from './screens/NotFoundScreen';
+import ProfileScreen from './screens/ProfileScreen'
 
 require('./App.css')
 
@@ -57,6 +58,7 @@ const App = () => {
         <Route path='/register' element={<Register notify={notify} setUser={setUser} />} exact />
         <Route path='/payment' element={<Payment user={user}/>} exact />
         <Route path='/course/:id' element={<CourseScreen user={user}/>} exact/>
+        <Route path='/profile' element={<ProfileScreen user={user}/>} exact/>
 
         <Route path='/admin/course/:id' element={<AdminCourseScreen user={user} />} />
         <Route path='/admin/section/:id' element={<AdminSectionScreen user={user} />} />
